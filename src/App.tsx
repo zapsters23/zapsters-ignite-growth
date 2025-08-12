@@ -7,6 +7,8 @@ import { HelmetProvider } from "react-helmet-async";
 import SiteLayout from "@/components/layout/SiteLayout";
 import Index from "./pages/Index";
 import Contact from "./pages/Contact";
+import Projects from "./pages/Projects";
+import Team from "./pages/Team";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -21,6 +23,8 @@ const App = () => (
           <Routes>
             <Route element={<SiteLayout />}>
               <Route index element={<Index />} />
+              <Route path="/projects" element={<Projects />} />
+              <Route path="/team" element={<Team />} />
               <Route path="/contact" element={<Contact />} />
             </Route>
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-zapsters.jpg";
-import GradientSpotlight from "@/components/site/GradientSpotlight";
+import HeroExpensive from "@/components/site/HeroExpensive";
 import { Code2, Palette, GraduationCap, Rocket, Sparkles, Shield } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
@@ -72,35 +71,7 @@ const Index = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <section className="relative pt-16 md:pt-24 pb-12 md:pb-20">
-        <div className="absolute inset-0 -z-10">
-          <img
-            src={heroImage}
-            alt="Abstract gradient hero background for Zapsters web agency"
-            className="h-full w-full object-cover opacity-50"
-            loading="eager"
-          />
-          <div className="absolute inset-0 bg-grid-pattern" />
-          <div className="absolute inset-0 aurora opacity-70" />
-        </div>
-        <GradientSpotlight />
-        <div className="mx-auto max-w-3xl text-center">
-          <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight bg-[var(--gradient-primary)] bg-clip-text text-transparent animate-enter">
-            Zapsters — Build. Design. Launch.
-          </h1>
-          <p className="mt-4 md:mt-6 text-lg md:text-xl text-muted-foreground animate-fade-in">
-            Zapsters crafts modern web experiences, premium UI/UX, and empowers students with real-world internships.
-          </p>
-          <div className="mt-8 flex items-center justify-center gap-3">
-            <Button asChild size="lg" variant="hero">
-              <Link to="/contact">Start a project</Link>
-            </Button>
-            <Button asChild size="lg" variant="outline">
-              <a href="#services">Our services</a>
-            </Button>
-          </div>
-        </div>
-      </section>
+      <HeroExpensive />
 
       <section id="services" className="py-16 md:py-24">
         <div className="mx-auto max-w-5xl">

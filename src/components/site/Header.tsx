@@ -10,6 +10,8 @@ const Header = () => {
         </Link>
         <nav className="hidden md:flex items-center gap-6 text-sm">
           <NavLink to="/" className="text-muted-foreground hover:text-foreground transition-colors">Home</NavLink>
+          <NavLink to="/projects" className="text-muted-foreground hover:text-foreground transition-colors">Projects</NavLink>
+          <NavLink to="/team" className="text-muted-foreground hover:text-foreground transition-colors">Team</NavLink>
           <a href="#services" className="text-muted-foreground hover:text-foreground transition-colors">Services</a>
           <a href="#internships" className="text-muted-foreground hover:text-foreground transition-colors">Internships</a>
           <NavLink to="/contact" className="text-muted-foreground hover:text-foreground transition-colors">Contact</NavLink>

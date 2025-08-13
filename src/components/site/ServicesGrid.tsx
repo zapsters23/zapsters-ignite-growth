@@ -18,22 +18,22 @@ import {
 } from "lucide-react";
 
 const services = [
-  { name: "Java", icon: Code2, description: "Enterprise-grade Java applications" },
-  { name: "Python", icon: Code2, description: "AI/ML and backend development" },
-  { name: "Full Stack", icon: Globe, description: "End-to-end web solutions" },
-  { name: "Web Development", icon: Globe, description: "Modern responsive websites" },
-  { name: "UI/UX", icon: Palette, description: "User-centered design systems" },
-  { name: "Data Science", icon: BarChart3, description: "Analytics and insights" },
-  { name: "AI/ML", icon: Brain, description: "Machine learning solutions" },
-  { name: "Data Mining", icon: Search, description: "Extract valuable insights" },
-  { name: "Cybersecurity", icon: Shield, description: "Secure digital infrastructure" },
-  { name: "Ethical Hacking", icon: Bug, description: "Penetration testing services" },
-  { name: "C/C++", icon: Cpu, description: "System-level programming" },
-  { name: "Game Development", icon: Gamepad2, description: "Interactive gaming experiences" },
-  { name: "3D Modeling", icon: Box, description: "3D visualization and modeling" },
-  { name: "CAD Design", icon: Ruler, description: "Computer-aided design" },
-  { name: "IoT", icon: Wifi, description: "Internet of Things solutions" },
-  { name: "Embedded Designs", icon: Microchip, description: "Hardware-software integration" },
+  { name: "Java", icon: Code2, description: "Enterprise-grade Java applications with Spring Boot" },
+  { name: "Python", icon: Code2, description: "AI/ML, Django, FastAPI backend development" },
+  { name: "Full Stack", icon: Globe, description: "Complete MERN/PERN stack solutions" },
+  { name: "Web Development", icon: Globe, description: "React, Next.js, modern responsive websites" },
+  { name: "UI/UX Design", icon: Palette, description: "User-centered design systems & prototyping" },
+  { name: "Data Science", icon: BarChart3, description: "Advanced analytics and business insights" },
+  { name: "AI/ML", icon: Brain, description: "Deep learning, NLP, computer vision solutions" },
+  { name: "Data Mining", icon: Search, description: "Big data processing and knowledge extraction" },
+  { name: "Cybersecurity", icon: Shield, description: "Secure infrastructure and threat analysis" },
+  { name: "Ethical Hacking", icon: Bug, description: "Penetration testing and vulnerability assessment" },
+  { name: "C/C++", icon: Cpu, description: "High-performance system programming" },
+  { name: "Game Development", icon: Gamepad2, description: "Unity, Unreal Engine gaming experiences" },
+  { name: "3D Modeling", icon: Box, description: "Blender, Maya 3D visualization" },
+  { name: "CAD Design", icon: Ruler, description: "AutoCAD, SolidWorks engineering design" },
+  { name: "IoT Solutions", icon: Wifi, description: "Arduino, Raspberry Pi connected devices" },
+  { name: "Embedded Systems", icon: Microchip, description: "Firmware and hardware integration" },
 ];
 
 const ServicesGrid = () => {
@@ -67,7 +67,7 @@ const ServicesGrid = () => {
             return (
               <div
                 key={service.name}
-                className="group relative rounded-2xl border glass p-6 hover-scale transition-all duration-300 hover:shadow-[var(--shadow-glow)]"
+                className="group relative rounded-2xl border glass p-6 hover-lift slide-up transition-all duration-300 hover:shadow-[var(--shadow-glow)]"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex flex-col items-center text-center space-y-4">

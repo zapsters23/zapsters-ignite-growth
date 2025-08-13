@@ -50,8 +50,8 @@ const Footer = () => {
         <div className="pt-8 border-t border-border/50">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">© {year} Zapsters. All rights reserved.</p>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <span>Proudly made by Zapsters</span>
+            <div className="flex items-center gap-2 text-sm">
+              <span className="bg-[var(--gradient-primary)] bg-clip-text text-transparent font-semibold">Proudly made by Zapsters</span>
               <Heart className="w-4 h-4 text-red-500 fill-red-500" />
             </div>
           </div>

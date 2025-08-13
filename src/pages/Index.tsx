@@ -1,9 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
-import HeroExpensive from "@/components/site/HeroExpensive";
+import HeroModern from "@/components/site/HeroModern";
 import ServicesGrid from "@/components/site/ServicesGrid";
-import { Code2, Palette, GraduationCap, Rocket, Sparkles, Shield } from "lucide-react";
+import TestimonialsSection from "@/components/site/TestimonialsSection";
+import TeamSection from "@/components/site/TeamSection";
+import { Code2, Palette, GraduationCap, Rocket, Sparkles, Shield, Calendar, MapPin } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
+import { Card, CardContent } from "@/components/ui/card";
 import { Link } from "react-router-dom";
 
 const Index = () => {
@@ -45,7 +48,7 @@ const Index = () => {
         name: "How can I start a project?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Click ‘Start a project’ to reach our contact page. We’ll respond within 24 hours to discuss your needs.",
+          text: "Click 'Start a project' to reach our contact page. We'll respond within 24 hours to discuss your needs.",
         },
       },
       {
@@ -53,7 +56,7 @@ const Index = () => {
         name: "Do you accept internship applications?",
         acceptedAnswer: {
           "@type": "Answer",
-          text: "Yes! Our internship program runs year-round. Apply via the Contact page and we’ll get back to you with next steps.",
+          text: "Yes! Our internship program runs year-round. Apply via the Contact page and we'll get back to you with next steps.",
         },
       },
     ],
@@ -72,7 +75,7 @@ const Index = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
-      <HeroExpensive />
+      <HeroModern />
 
       <ServicesGrid />
 
@@ -151,18 +154,94 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="testimonials" className="py-16">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">What clients say</h2>
-          <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
-            <figure className="rounded-xl border glass p-6">
-              <blockquote className="text-lg">“Zapsters delivered on time with craftsmanship. Our metrics jumped in a week.”</blockquote>
-              <figcaption className="mt-4 text-sm text-muted-foreground">— Priya N., Product Lead</figcaption>
-            </figure>
-            <figure className="rounded-xl border glass p-6">
-              <blockquote className="text-lg">“Beautiful UI and a thoughtful team. They made complex flows feel effortless.”</blockquote>
-              <figcaption className="mt-4 text-sm text-muted-foreground">— Marco D., Founder</figcaption>
-            </figure>
+      <TestimonialsSection />
+      
+      <TeamSection />
+      
+      {/* Events Section */}
+      <section className="py-20 md:py-32 relative">
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-grid-pattern opacity-15" />
+          <div 
+            className="absolute inset-0"
+            style={{
+              background: "radial-gradient(1000px circle at 70% 30%, hsl(var(--brand-1) / 0.1), transparent 70%)"
+            }}
+          />
+        </div>
+        
+        <div className="container">
+          <div className="text-center space-y-6 mb-16 slide-up">
+            <h2 className="text-4xl md:text-6xl font-black tracking-tight">
+              <span className="bg-[var(--gradient-primary)] bg-clip-text text-transparent">
+                Our Latest
+              </span>
+              <br />
+              <span className="text-foreground">Events & Workshops</span>
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+              Driving innovation through knowledge sharing and community engagement
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {/* Event 1 */}
+            <Card className="group glass hover-lift slide-up">
+              <CardContent className="p-8 space-y-6">
+                <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3 group-hover:scale-110 transition-transform">
+                  <Shield className="w-full h-full text-white" />
+                </div>
+                
+                <div className="space-y-3">
+                  <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                    Noctivus '25 Cybersecurity Symposium
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    National level cybersecurity symposium conducted at Velammal Engineering College, featuring workshops on ethical hacking, penetration testing, and modern security practices.
+                  </p>
+                </div>
+                
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <span>January 2025</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4" />
+                    <span>Velammal Engineering College</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            {/* Event 2 */}
+            <Card className="group glass hover-lift slide-up" style={{ animationDelay: "0.2s" }}>
+              <CardContent className="p-8 space-y-6">
+                <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3 group-hover:scale-110 transition-transform">
+                  <Palette className="w-full h-full text-white" />
+                </div>
+                
+                <div className="space-y-3">
+                  <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
+                    Panimalar UI/UX Workshop
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    Comprehensive hands-on workshop on modern UI/UX design principles, prototyping tools, and user research methodologies for aspiring designers.
+                  </p>
+                </div>
+                
+                <div className="flex items-center gap-4 text-sm text-muted-foreground">
+                  <div className="flex items-center gap-2">
+                    <Calendar className="w-4 h-4" />
+                    <span>December 2024</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <MapPin className="w-4 h-4" />
+                    <span>Panimalar Engineering College</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -197,7 +276,7 @@ const Index = () => {
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Ready to build something great?</h2>
           <p className="mt-3 text-muted-foreground">
-            Tell us about your idea — we’ll turn it into a product people love.
+            Tell us about your idea — we'll turn it into a product people love.
           </p>
           <div className="mt-8">
             <Button asChild size="lg" variant="hero">

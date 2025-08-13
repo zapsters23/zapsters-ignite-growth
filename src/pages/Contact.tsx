@@ -6,7 +6,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { toast } from "sonner";
 import { useState } from "react";
-import { Mail, Phone, MapPin, Clock, Send, MessageSquare } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, MessageSquare, Linkedin, Instagram, Twitter } from "lucide-react";
 
 const Contact = () => {
   const [loading, setLoading] = useState(false);
@@ -92,8 +92,12 @@ const Contact = () => {
                       </div>
                       <div className="space-y-1">
                         <h3 className="font-semibold text-lg">Email Us</h3>
-                        <p className="text-muted-foreground">hello@zapsters.com</p>
-                        <p className="text-muted-foreground">careers@zapsters.com</p>
+                        <a href="mailto:admin@zapsters.in" className="block text-muted-foreground hover:text-primary transition-colors">
+                          admin@zapsters.in
+                        </a>
+                        <a href="mailto:support@zapsters.in" className="block text-muted-foreground hover:text-primary transition-colors">
+                          support@zapsters.in
+                        </a>
                       </div>
                     </div>
                   </CardContent>
@@ -107,8 +111,12 @@ const Contact = () => {
                       </div>
                       <div className="space-y-1">
                         <h3 className="font-semibold text-lg">Call Us</h3>
-                        <p className="text-muted-foreground">+91 98765 43210</p>
-                        <p className="text-muted-foreground">+91 87654 32109</p>
+                        <a href="tel:+919342408432" className="block text-muted-foreground hover:text-primary transition-colors">
+                          +91 9342 408 432
+                        </a>
+                        <a href="tel:+919514408432" className="block text-muted-foreground hover:text-primary transition-colors">
+                          +91 9514 408 432
+                        </a>
                       </div>
                     </div>
                   </CardContent>
@@ -139,6 +147,34 @@ const Contact = () => {
                         <h3 className="font-semibold text-lg">Response Time</h3>
                         <p className="text-muted-foreground">Within 24 hours</p>
                         <p className="text-muted-foreground">Monday - Friday, 9 AM - 6 PM IST</p>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Social Media */}
+                <Card className="glass">
+                  <CardContent className="p-6">
+                    <div className="space-y-4">
+                      <h3 className="font-semibold text-lg flex items-center gap-3">
+                        <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3">
+                          <Linkedin className="w-full h-full text-white" />
+                        </div>
+                        Follow Us
+                      </h3>
+                      <div className="flex items-center gap-4">
+                        <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                          <Linkedin className="w-5 h-5" />
+                          <span>LinkedIn</span>
+                        </a>
+                        <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                          <Instagram className="w-5 h-5" />
+                          <span>Instagram</span>
+                        </a>
+                        <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
+                          <Twitter className="w-5 h-5" />
+                          <span>Twitter</span>
+                        </a>
                       </div>
                     </div>
                   </CardContent>

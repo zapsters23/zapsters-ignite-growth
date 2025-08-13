@@ -5,54 +5,68 @@ import { Link } from "react-router-dom";
 
 const HeroExpensive = () => {
   return (
-    <section className="relative pt-20 md:pt-28 pb-12 md:pb-20">
+    <section className="relative pt-24 md:pt-32 pb-16 md:pb-24 min-h-screen flex items-center">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-grid-pattern opacity-70" />
-        <div className="absolute inset-0 aurora opacity-80" />
+        <div className="absolute inset-0 bg-grid-pattern opacity-30" />
+        <div className="absolute inset-0 aurora opacity-60" />
         <div
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(1000px circle at 10% -10%, hsl(var(--brand-2) / 0.25), transparent 40%), radial-gradient(800px circle at 90% 10%, hsl(var(--brand-1) / 0.25), transparent 40%)",
+              "radial-gradient(1200px circle at 20% -20%, hsl(var(--brand-2) / 0.4), transparent 50%), radial-gradient(1000px circle at 80% 20%, hsl(var(--brand-1) / 0.4), transparent 50%)",
           }}
         />
       </div>
       <GradientSpotlight />
 
       <div className="container">
-        <div className="grid md:grid-cols-2 gap-8 items-center">
-          <div className="text-center md:text-left">
-            <h1 className="text-4xl md:text-6xl font-extrabold leading-tight tracking-tight bg-[var(--gradient-primary)] bg-clip-text text-transparent animate-enter">
-              Build premium experiences that feel effortless
-            </h1>
-            <p className="mt-4 md:mt-6 text-lg md:text-xl text-muted-foreground animate-fade-in">
-              Zapsters crafts elite web platforms, stunning UI/UX, and empowers talent through real-world internships.
-            </p>
-            <div className="mt-8 flex items-center justify-center md:justify-start gap-3">
-              <Button asChild size="lg" variant="hero">
-                <Link to="/contact">Start a project</Link>
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="text-center md:text-left space-y-8">
+            <div className="space-y-4">
+              <h1 className="text-5xl md:text-7xl font-black leading-[0.9] tracking-tight">
+                <span className="bg-[var(--gradient-primary)] bg-clip-text text-transparent animate-enter">
+                  Premium Tech
+                </span>
+                <br />
+                <span className="text-foreground font-light">that feels</span>
+                <br />
+                <span className="bg-[var(--gradient-primary)] bg-clip-text text-transparent">
+                  Effortless
+                </span>
+              </h1>
+              <p className="text-xl md:text-2xl text-muted-foreground font-light leading-relaxed animate-fade-in">
+                Elite web development, stunning UI/UX design, and world-class internship programs
+              </p>
+            </div>
+            <div className="flex items-center justify-center md:justify-start gap-4">
+              <Button asChild size="lg" variant="hero" className="text-lg px-8 py-6 h-auto">
+                <Link to="/contact">Start Your Project</Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
-                <Link to="/projects">View projects</Link>
+              <Button asChild size="lg" variant="outline" className="text-lg px-8 py-6 h-auto glass">
+                <Link to="/projects">View Our Work</Link>
               </Button>
             </div>
           </div>
 
           <div className="relative">
-            <div className="relative aspect-[4/3] rounded-2xl border glass overflow-hidden shadow-[var(--shadow-glow)] hover-scale">
+            <div className="relative aspect-[4/3] rounded-3xl border glass overflow-hidden shadow-[var(--shadow-glow)] hover-scale">
               <img
                 src={heroImage}
-                alt="Zapsters premium gradient showcase for web, design and internships"
+                alt="Zapsters premium tech showcase - web development, UI/UX design and internships"
                 className="h-full w-full object-cover"
                 loading="eager"
               />
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/10 via-transparent to-white/10 mix-blend-overlay" />
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-tr from-black/20 via-transparent to-white/20 mix-blend-overlay" />
             </div>
-            <div className="absolute -top-6 -right-6 hidden md:block">
-              <div className="rounded-xl border glass px-4 py-2 text-sm shadow-[var(--shadow-elegant)]">99+ Lighthouse</div>
+            <div className="absolute -top-8 -right-8 hidden md:block">
+              <div className="rounded-2xl border glass px-6 py-3 text-base font-medium shadow-[var(--shadow-elegant)] bg-background/80">
+                99+ Lighthouse
+              </div>
             </div>
-            <div className="absolute -bottom-6 -left-6 hidden md:block">
-              <div className="rounded-xl border glass px-4 py-2 text-sm shadow-[var(--shadow-elegant)]">Design Systems</div>
+            <div className="absolute -bottom-8 -left-8 hidden md:block">
+              <div className="rounded-2xl border glass px-6 py-3 text-base font-medium shadow-[var(--shadow-elegant)] bg-background/80">
+                Premium Design
+              </div>
             </div>
           </div>
         </div>

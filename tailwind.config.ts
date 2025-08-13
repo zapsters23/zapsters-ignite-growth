@@ -115,8 +115,8 @@ export default {
 				exit: 'fade-out 0.3s ease-out, scale-out 0.2s ease-out'
 			},
 			fontFamily: {
-				brand: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-				sans: ['Manrope', 'ui-sans-serif', 'system-ui', 'sans-serif']
+				brand: ['SF Pro Display', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif'],
+				sans: ['SF Pro Display', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'sans-serif']
 			}
 		}
 	},

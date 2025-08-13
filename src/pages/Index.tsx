@@ -1,6 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import HeroExpensive from "@/components/site/HeroExpensive";
+import ServicesGrid from "@/components/site/ServicesGrid";
 import { Code2, Palette, GraduationCap, Rocket, Sparkles, Shield } from "lucide-react";
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from "@/components/ui/accordion";
 import { Link } from "react-router-dom";
@@ -73,7 +74,9 @@ const Index = () => {
 
       <HeroExpensive />
 
-      <section id="services" className="py-16 md:py-24">
+      <ServicesGrid />
+
+      <section id="legacy-services" className="py-16 md:py-24">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Services</h2>
           <p className="mt-2 text-muted-foreground max-w-2xl">

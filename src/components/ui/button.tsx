@@ -5,20 +5,18 @@ import { cva, type VariantProps } from "class-variance-authority"
 import { cn } from "@/lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-500 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
-        default: "bg-primary text-primary-foreground hover:bg-primary/90",
-        destructive:
-          "bg-destructive text-destructive-foreground hover:bg-destructive/90",
-        outline:
-          "border border-input bg-background hover:bg-accent hover:text-accent-foreground",
-        secondary:
-          "bg-secondary text-secondary-foreground hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        hero: "bg-gradient-to-r from-violet-600 to-blue-600 text-white border-0 shadow-lg shadow-blue-500/35 hover:shadow-xl hover:shadow-violet-500/35 hover:scale-105 transform-gpu transition-all duration-300 font-semibold",
+        default: "bg-violet-600 text-white hover:bg-violet-700 shadow-lg",
+        destructive: "bg-red-600 text-white hover:bg-red-700 shadow-lg",
+        outline: "border border-violet-300 bg-white/10 backdrop-blur-xl text-violet-600 hover:bg-violet-50/20 hover:text-violet-700 shadow-lg",
+        secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300 shadow-lg",
+        ghost: "hover:bg-violet-100/20 hover:text-violet-600 backdrop-blur-sm",
+        link: "text-violet-600 underline-offset-4 hover:underline",
+        hero: "bg-gradient-to-r from-violet-600 to-purple-600 text-white border-0 shadow-xl shadow-violet-500/50 hover:shadow-2xl hover:shadow-purple-500/60 hover:scale-105 transform transition-all duration-300 font-semibold backdrop-blur-xl",
+        glass: "bg-white/10 backdrop-blur-xl border border-white/20 text-white hover:bg-white/20 shadow-xl",
       },
       size: {
         default: "h-10 px-4 py-2",

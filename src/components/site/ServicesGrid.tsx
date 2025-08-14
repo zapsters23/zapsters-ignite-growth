@@ -38,13 +38,15 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <section id="services" className="py-20 md:py-32 relative">
+    <section id="services" className="py-20 md:py-32 relative bg-gradient-to-br from-indigo-900 via-purple-900 to-violet-900">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+        <div className="absolute top-0 left-1/4 w-96 h-96 bg-violet-500/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-80 h-80 bg-purple-500/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
         <div 
-          className="absolute inset-0"
+          className="absolute inset-0 opacity-10"
           style={{
-            background: "radial-gradient(800px circle at 50% 50%, rgb(139 92 246 / 0.1), transparent 70%)"
+            backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
+            backgroundSize: "50px 50px"
           }}
         />
       </div>
@@ -52,11 +54,11 @@ const ServicesGrid = () => {
       <div className="container">
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-4xl md:text-6xl font-black tracking-tight">
-            <span className="bg-[var(--gradient-primary)] bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-violet-400 to-purple-400 bg-clip-text text-transparent">
               Our Expertise
             </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
             From cutting-edge AI to robust cybersecurity, we deliver premium solutions across every technology stack
           </p>
         </div>
@@ -67,18 +69,18 @@ const ServicesGrid = () => {
             return (
               <div
                 key={service.name}
-                className="group relative rounded-2xl border border-white/20 bg-white/60 dark:border-gray-800/20 dark:bg-gray-900/60 backdrop-blur-xl p-6 hover-lift slide-up transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/25"
+                className="group relative rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-violet-500/50 hover:bg-white/20 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex flex-col items-center text-center space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 p-3 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-violet-600 to-purple-600 p-3 group-hover:scale-110 transition-transform shadow-lg">
                     <Icon className="w-full h-full text-white" />
                   </div>
                   <div className="space-y-2">
-                    <h3 className="font-semibold text-lg group-hover:text-primary transition-colors">
+                    <h3 className="font-semibold text-lg text-white group-hover:text-violet-300 transition-colors">
                       {service.name}
                     </h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
+                    <p className="text-sm text-white/60 leading-relaxed">
                       {service.description}
                     </p>
                   </div>

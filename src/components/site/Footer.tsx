@@ -9,10 +9,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-[var(--gradient-primary)] flex items-center justify-center">
+              <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-violet-600 to-blue-600 flex items-center justify-center">
                 <span className="text-white font-black text-sm">Z</span>
               </div>
-              <span className="font-black text-xl bg-[var(--gradient-primary)] bg-clip-text text-transparent">Zapsters</span>
+              <span className="font-black text-xl bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent">Zapsters</span>
             </div>
             <p className="text-muted-foreground leading-relaxed">
               Premium tech solutions and world-class internship programs.
@@ -51,7 +51,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row items-center justify-between gap-4">
             <p className="text-sm text-muted-foreground">© {year} Zapsters. All rights reserved.</p>
             <div className="flex items-center gap-2 text-sm">
-              <span className="bg-[var(--gradient-primary)] bg-clip-text text-transparent font-semibold">Proudly made by Zapsters</span>
+              <span className="bg-gradient-to-r from-violet-600 to-blue-600 bg-clip-text text-transparent font-semibold">Proudly made by Zapsters</span>
               <Heart className="w-4 h-4 text-red-500 fill-red-500" />
             </div>
           </div>

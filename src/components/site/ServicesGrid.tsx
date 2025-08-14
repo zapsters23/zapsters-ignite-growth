@@ -44,7 +44,7 @@ const ServicesGrid = () => {
         <div 
           className="absolute inset-0"
           style={{
-            background: "radial-gradient(800px circle at 50% 50%, hsl(var(--brand-1) / 0.1), transparent 70%)"
+            background: "radial-gradient(800px circle at 50% 50%, rgb(139 92 246 / 0.1), transparent 70%)"
           }}
         />
       </div>
@@ -67,11 +67,11 @@ const ServicesGrid = () => {
             return (
               <div
                 key={service.name}
-                className="group relative rounded-2xl border glass p-6 hover-lift slide-up transition-all duration-300 hover:shadow-[var(--shadow-glow)]"
+                className="group relative rounded-2xl border border-white/20 bg-white/60 dark:border-gray-800/20 dark:bg-gray-900/60 backdrop-blur-xl p-6 hover-lift slide-up transition-all duration-300 hover:shadow-xl hover:shadow-violet-500/25"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex flex-col items-center text-center space-y-4">
-                  <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3 group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 p-3 group-hover:scale-110 transition-transform">
                     <Icon className="w-full h-full text-white" />
                   </div>
                   <div className="space-y-2">

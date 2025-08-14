@@ -40,7 +40,7 @@ const TeamSection = () => {
         <div 
           className="absolute inset-0"
           style={{
-            background: "radial-gradient(800px circle at 30% 80%, hsl(var(--brand-2) / 0.12), transparent 60%)"
+            background: "radial-gradient(800px circle at 30% 80%, rgb(59 130 246 / 0.12), transparent 60%)"
           }}
         />
       </div>
@@ -80,7 +80,7 @@ const TeamSection = () => {
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="absolute -top-3 -right-3 w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3 group-hover:scale-110 transition-transform">
+                      <div className="absolute -top-3 -right-3 w-12 h-12 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 p-3 group-hover:scale-110 transition-transform">
                         <Icon className="w-full h-full text-white" />
                       </div>
                     </div>
@@ -131,7 +131,7 @@ const TeamSection = () => {
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardContent className="p-6 space-y-4">
-                    <div className="w-16 h-16 mx-auto rounded-xl bg-[var(--gradient-primary)] p-4 group-hover:scale-110 transition-transform">
+                    <div className="w-16 h-16 mx-auto rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 p-4 group-hover:scale-110 transition-transform">
                       <Icon className="w-full h-full text-white" />
                     </div>
                     <div>

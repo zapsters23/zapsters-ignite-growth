@@ -36,7 +36,7 @@ const TestimonialsSection = () => {
         <div 
           className="absolute inset-0"
           style={{
-            background: "radial-gradient(1000px circle at 50% 50%, hsl(var(--brand-1) / 0.08), transparent 70%)"
+            background: "radial-gradient(1000px circle at 50% 50%, rgb(139 92 246 / 0.08), transparent 70%)"
           }}
         />
       </div>
@@ -64,7 +64,7 @@ const TestimonialsSection = () => {
             >
               <CardContent className="p-8 space-y-6">
                 {/* Quote Icon */}
-                <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-violet-600 to-blue-600 p-3 group-hover:scale-110 transition-transform">
                   <Quote className="w-full h-full text-white" />
                 </div>
                 

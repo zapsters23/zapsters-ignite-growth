@@ -25,7 +25,7 @@ const HeroModern = () => {
           className="absolute inset-0"
           style={{
             background:
-              "radial-gradient(1200px circle at 20% 20%, hsl(var(--brand-1) / 0.15), transparent 50%), radial-gradient(800px circle at 80% 60%, hsl(var(--brand-2) / 0.15), transparent 50%)",
+              "radial-gradient(1200px circle at 20% 20%, rgb(139 92 246 / 0.15), transparent 50%), radial-gradient(800px circle at 80% 60%, rgb(59 130 246 / 0.15), transparent 50%)",
           }}
         />
       </div>
@@ -125,7 +125,7 @@ const HeroModern = () => {
               {/* Central Tech Element */}
               <div className="w-96 h-96 mx-auto relative">
                 <div className="w-full h-full rounded-3xl border glass overflow-hidden pulse-glow">
-                  <div className="absolute inset-0 bg-[var(--gradient-primary)] opacity-20" />
+                  <div className="absolute inset-0 bg-gradient-to-r from-violet-600/20 to-blue-600/20" />
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="text-6xl font-black text-primary opacity-50">Z</div>
                   </div>

@@ -17,7 +17,7 @@ const TeamSection = () => {
     },
     {
       name: "Rahul",
-      role: "Chief Technology Officer", 
+      role: "Chief Technology Officer",
       type: "cto",
       image: ctoPic,
       icon: Zap,
@@ -34,29 +34,28 @@ const TeamSection = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 relative bg-gradient-to-br from-indigo-900 via-slate-900 to-purple-900">
+    <section className="py-20 md:py-32 relative">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-1/3 w-96 h-96 bg-indigo-500/25 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-purple-500/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
-        <div 
+        <div className="absolute bottom-1/3 right-1/4 w-80 h-80 bg-indigo-500/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
+        <div
           className="absolute inset-0 opacity-15"
           style={{
-            backgroundImage: "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
+            backgroundImage:
+              "linear-gradient(rgba(0,0,0,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(0,0,0,0.1) 1px, transparent 1px)",
             backgroundSize: "60px 60px"
           }}
         />
       </div>
-      
+
       <div className="container">
         <div className="text-center space-y-6 mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight">
-            <span className="bg-gradient-to-r from-indigo-400 to-purple-400 bg-clip-text text-transparent">
-              Meet Our
-            </span>
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-black">
+            Meet Our
             <br />
-            <span className="text-white">Leadership Team</span>
+            Leadership Team
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-black/80 max-w-3xl mx-auto font-light leading-relaxed">
             Passionate leaders and expert engineers working together to deliver exceptional results.
           </p>
         </div>
@@ -66,43 +65,43 @@ const TeamSection = () => {
           {teamMembers.map((member, index) => {
             const Icon = member.icon;
             return (
-              <Card 
-                key={member.name} 
-                className={`group border border-white/20 bg-white/10 backdrop-blur-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 animate-fade-in ${member.type === 'ceo' ? 'lg:col-span-2 max-w-4xl mx-auto' : ''}`}
+              <Card
+                key={member.name}
+                className={`group border border-black/20 bg-white backdrop-blur-xl hover:bg-black/5 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 animate-fade-in ${member.type === 'ceo' ? 'lg:col-span-2 max-w-4xl mx-auto' : ''}`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <CardContent className="p-8 md:p-12">
                   <div className={`flex flex-col ${member.type === 'ceo' ? 'md:flex-row' : ''} items-center gap-8`}>
                     {/* Photo */}
                     <div className={`relative ${member.type === 'ceo' ? 'w-48 h-48' : 'w-32 h-32'}`}>
-                      <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-violet-400/30 group-hover:border-violet-400/60 transition-colors">
-                        <img 
-                          src={member.image} 
+                      <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-indigo-400/30 group-hover:border-indigo-400/60 transition-colors">
+                        <img
+                          src={member.image}
                           alt={member.name}
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="absolute -top-3 -right-3 w-12 h-12 rounded-xl bg-gradient-to-r from-indigo-600 to-purple-600 p-3 group-hover:scale-110 transition-transform shadow-lg">
+                      <div className="absolute -top-3 -right-3 w-12 h-12 rounded-xl bg-indigo-600 p-3 group-hover:scale-110 transition-transform shadow-lg">
                         <Icon className="w-full h-full text-white" />
                       </div>
                     </div>
-                    
+
                     {/* Info */}
                     <div className={`text-center ${member.type === 'ceo' ? 'md:text-left' : ''} space-y-4 flex-1`}>
                       <div>
-                        <h3 className={`font-black tracking-tight text-white group-hover:text-indigo-300 transition-colors ${member.type === 'ceo' ? 'text-3xl' : 'text-2xl'}`}>
+                        <h3 className={`font-black tracking-tight text-black transition-colors ${member.type === 'ceo' ? 'text-3xl' : 'text-2xl'}`}>
                           {member.name}
                         </h3>
-                        <p className="text-lg text-white/70 font-medium">{member.role}</p>
+                        <p className="text-lg text-black/70 font-medium">{member.role}</p>
                       </div>
-                      
-                      <p className="text-white/80 leading-relaxed">
+
+                      <p className="text-black/80 leading-relaxed">
                         {member.description}
                       </p>
-                      
+
                       <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                         {member.expertise.map((skill) => (
-                          <Badge key={skill} className="bg-white/10 text-white border-white/20 hover:bg-white/20">
+                          <Badge key={skill} className="bg-black/5 text-black border-black/20 hover:bg-black/10">
                             {skill}
                           </Badge>
                         ))}
@@ -117,30 +116,28 @@ const TeamSection = () => {
 
         {/* Tech Team */}
         <div className="space-y-8">
-          <h3 className="text-3xl md:text-4xl font-bold text-center">
-            <span className="bg-gradient-to-r from-purple-400 to-indigo-400 bg-clip-text text-transparent">
-              Our Expert Tech Team
-            </span>
+          <h3 className="text-3xl md:text-4xl font-bold text-center text-black">
+            Our Expert Tech Team
           </h3>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             {techTeam.map((member, index) => {
               const Icon = member.icon;
               return (
-                <Card 
-                  key={member.name} 
-                  className="group border border-white/20 bg-white/10 backdrop-blur-xl hover:bg-white/20 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/50 text-center animate-fade-in"
+                <Card
+                  key={member.name}
+                  className="group border border-black/20 bg-white backdrop-blur-xl hover:bg-black/5 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 text-center animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
                   <CardContent className="p-6 space-y-4">
-                    <div className="w-16 h-16 mx-auto rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 p-4 group-hover:scale-110 transition-transform shadow-lg">
+                    <div className="w-16 h-16 mx-auto rounded-xl bg-indigo-600 p-4 group-hover:scale-110 transition-transform shadow-lg">
                       <Icon className="w-full h-full text-white" />
                     </div>
                     <div>
-                      <h4 className="font-bold text-lg text-white group-hover:text-purple-300 transition-colors">
+                      <h4 className="font-bold text-lg text-black transition-colors">
                         {member.name}
                       </h4>
-                      <p className="text-sm text-white/60">{member.expertise}</p>
+                      <p className="text-sm text-black/60">{member.expertise}</p>
                     </div>
                   </CardContent>
                 </Card>

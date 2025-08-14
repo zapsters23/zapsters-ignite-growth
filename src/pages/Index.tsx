@@ -279,7 +279,7 @@ const Index = () => {
             Tell us about your idea — we'll turn it into a product people love.
           </p>
           <div className="mt-8">
-            <Button asChild size="lg" variant="hero">
+            <Button className="bg-indigo-600">
               <Link to="/contact">Get in touch</Link>
             </Button>
           </div>

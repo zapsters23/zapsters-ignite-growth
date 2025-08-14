@@ -92,11 +92,11 @@ const Contact = () => {
                       </div>
                       <div className="space-y-1">
                         <h3 className="font-semibold text-lg">Email Us</h3>
-                        <a href="mailto:admin@zapsters.in" className="block text-muted-foreground hover:text-primary transition-colors">
-                          admin@zapsters.in
+                        <a href="mailto: zapsters23@gmail.com" className="block text-muted-foreground hover:text-primary transition-colors">
+                          zapsters23@gmail.com
                         </a>
-                        <a href="mailto:support@zapsters.in" className="block text-muted-foreground hover:text-primary transition-colors">
-                          support@zapsters.in
+                        <a href="mailto:zapsterseditor@gmail.com" className="block text-muted-foreground hover:text-primary transition-colors">
+                          zapsterseditor@gmail.com
                         </a>
                       </div>
                     </div>
@@ -198,11 +198,11 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name</Label>
-                      <Input id="name" name="name" placeholder="John Doe" required />
+                      <Input id="name" name="name" placeholder="Full Name" required />
                     </div>
                     <div className="space-y-2">
                       <Label htmlFor="email">Email Address</Label>
-                      <Input id="email" name="email" type="email" placeholder="john@company.com" required />
+                      <Input id="email" name="email" type="email" placeholder="zap@company.com" required />
                     </div>
                   </div>
                   <div className="space-y-2">

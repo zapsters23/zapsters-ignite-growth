@@ -12,7 +12,7 @@ const projects = [
     tags: ["React", "Supabase", "Tailwind"],
   },
   {
-    title: "Headless E‑commerce Revamp",
+    title: "Headless E-commerce Revamp",
     desc: "Lightning-fast storefront with smooth UX and A/B tested flows.",
     Icon: ShoppingBag,
     tags: ["Headless", "Stripe", "Edge"],
@@ -31,13 +31,13 @@ const projects = [
   },
   {
     title: "IoT Fleet Console",
-    desc: "Manage thousands of devices with real‑time telemetry.",
+    desc: "Manage thousands of devices with real-time telemetry.",
     Icon: Cpu,
     tags: ["WebSockets", "Workers"],
   },
   {
     title: "Global Marketing Microsites",
-    desc: "Localised, SEO‑ready, and easy to launch at scale.",
+    desc: "Localised, SEO-ready, and easy to launch at scale.",
     Icon: Globe,
     tags: ["SEO", "i18n"],
   },
@@ -67,36 +67,39 @@ const Projects = () => {
         <script type="application/ld+json">{JSON.stringify(listSchema)}</script>
       </Helmet>
 
-      <section className="py-12 md:py-20">
+      <section className="py-12 md:py-20 bg-white text-black">
         <div className="mx-auto max-w-5xl">
-          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight bg-[var(--gradient-primary)] bg-clip-text text-transparent">
+          <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
             Projects & Case Studies
           </h1>
-          <p className="mt-3 text-muted-foreground max-w-2xl">
+          <p className="mt-3 text-black/70 max-w-2xl">
             A snapshot of work we love. If you want a deeper dive, reach out — we’ll walk you through our approach in detail.
           </p>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map(({ title, desc, Icon, tags }) => (
-              <article key={title} className="rounded-xl border glass hover-scale">
-                <Card>
+              <article key={title} className="rounded-xl border border-black/10 bg-white hover:shadow-lg transition-all">
+                <Card className="bg-transparent border-0 shadow-none">
                   <CardHeader>
                     <div className="flex items-center gap-3">
-                      <Icon className="text-primary" />
-                      <CardTitle className="text-xl">{title}</CardTitle>
+                      <Icon className="text-indigo-600" />
+                      <CardTitle className="text-xl text-black">{title}</CardTitle>
                     </div>
-                    <CardDescription>{desc}</CardDescription>
+                    <CardDescription className="text-black/70">{desc}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
                       {tags.map((t) => (
-                        <span key={t} className="text-xs px-2 py-1 rounded-full border bg-background/60">
+                        <span
+                          key={t}
+                          className="text-xs px-2 py-1 rounded-full border border-black/10 bg-black/5 text-black"
+                        >
                           {t}
                         </span>
                       ))}
                     </div>
                     <div className="mt-6">
-                      <Button asChild variant="secondary">
+                      <Button asChild className="bg-indigo-600 hover:bg-indigo-700 text-white">
                         <Link to="/contact">View case study</Link>
                       </Button>
                     </div>

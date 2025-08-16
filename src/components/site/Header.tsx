@@ -3,14 +3,14 @@ import { Button } from "@/components/ui/button";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 z-50 w-full bg-white/70 backdrop-blur-md border-b border-black/10">
-      <div className="container flex h-16 items-center justify-between">
+    <header className="fixed top-0 z-50 w-full bg-white/5 backdrop-blur-2xl border-b border-purple-200/30">
+      <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 font-semibold text-lg">
-          <div className="w-9 h-9 rounded-xl bg-[var(--gradient-primary)] flex items-center justify-center">
-            <span className="text-white font-bold text-base">Z</span>
+          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-600 via-indigo-600 to-violet-700 flex items-center justify-center shadow-lg shadow-purple-500/30">
+            <span className="text-white font-black text-lg">Z</span>
           </div>
-          <span className="bg-[var(--gradient-primary)] bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-700 bg-clip-text text-transparent font-black">
             Zapsters
           </span>
         </Link>
@@ -29,8 +29,8 @@ const Header = () => {
               key={to}
               to={to}
               className={({ isActive }) =>
-                `transition-all hover:text-indigo-600 hover:underline underline-offset-4 ${
-                  isActive ? "text-indigo-600" : "text-black/80"
+                `transition-all duration-300 hover:text-purple-600 hover:scale-105 px-3 py-2 rounded-xl hover:bg-purple-100/20 ${
+                  isActive ? "text-purple-600 bg-purple-100/30" : "text-black/80"
                 }`
               }
             >
@@ -45,14 +45,14 @@ const Header = () => {
             asChild
             variant="ghost"
             size="sm"
-            className="hidden md:flex text-black/80 hover:text-black"
+            className="hidden md:flex text-black/80 hover:text-purple-600 hover:bg-purple-100/20 rounded-xl"
           >
             <Link to="/internships">Join Program</Link>
           </Button>
           <Button
             asChild
             size="sm"
-            className="bg-indigo-600 text-white hover:bg-indigo-700"
+            className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:from-purple-700 hover:to-indigo-700 rounded-2xl px-6 shadow-lg shadow-purple-500/30 hover:scale-105 transition-all duration-300"
           >
             <Link to="/contact">Start Project</Link>
           </Button>

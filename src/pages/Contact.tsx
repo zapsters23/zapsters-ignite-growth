@@ -55,13 +55,16 @@ const Contact = () => {
         <script type="application/ld+json">{JSON.stringify(contactSchema)}</script>
       </Helmet>
 
-      <section className="py-20 md:py-32 relative">
+      <section className="py-20 md:py-32 relative min-h-screen bg-gradient-to-br from-purple-50 via-indigo-50 to-violet-100">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-grid-pattern opacity-20" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-400/30 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-indigo-400/30 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
+          <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-violet-400/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
           <div 
-            className="absolute inset-0"
+            className="absolute inset-0 opacity-30"
             style={{
-              background: "radial-gradient(800px circle at 70% 30%, hsl(var(--brand-1) / 0.15), transparent 60%)"
+              backgroundImage: "radial-gradient(circle at 1px 1px, rgba(147, 51, 234, 0.2) 1px, transparent 0)",
+              backgroundSize: "40px 40px"
             }}
           />
         </div>
@@ -71,161 +74,184 @@ const Contact = () => {
             {/* Contact Info */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-4xl md:text-6xl font-black tracking-tight">
-                  <span className="bg-[var(--gradient-primary)] bg-clip-text text-transparent">
+                <h1 className="text-5xl md:text-7xl font-black tracking-tight">
+                  <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-700 bg-clip-text text-transparent">
                     Let's Build
                   </span>
                   <br />
-                  <span className="text-foreground">Something Amazing</span>
+                  <span className="text-black">Something Amazing</span>
                 </h1>
-                <p className="text-xl text-muted-foreground font-light leading-relaxed">
+                <p className="text-xl text-black/70 font-light leading-relaxed">
                   Ready to start your project or join our team? We're here to turn your vision into reality.
                 </p>
               </div>
 
               <div className="grid gap-6">
-                <Card className="glass">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3">
+                <div className="rounded-3xl border border-white/30 bg-white/20 backdrop-blur-2xl shadow-2xl shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 hover:scale-[1.02]">
+                  <div className="p-8">
+                    <div className="flex items-start gap-6">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 via-indigo-600 to-violet-700 p-4 shadow-lg shadow-purple-500/30">
                         <Mail className="w-full h-full text-white" />
                       </div>
-                      <div className="space-y-1">
-                        <h3 className="font-semibold text-lg">Email Us</h3>
-                        <a href="mailto:admin@zapsters.in" className="block text-muted-foreground hover:text-primary transition-colors">
+                      <div className="space-y-3">
+                        <h3 className="font-bold text-xl text-black">Email Us</h3>
+                        <a href="mailto:admin@zapsters.in" className="block text-black/70 hover:text-purple-600 transition-colors text-lg font-medium">
                           admin@zapsters.in
                         </a>
-                        <a href="mailto:support@zapsters.in" className="block text-muted-foreground hover:text-primary transition-colors">
+                        <a href="mailto:support@zapsters.in" className="block text-black/70 hover:text-purple-600 transition-colors text-lg font-medium">
                           support@zapsters.in
                         </a>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
-                <Card className="glass">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3">
+                <div className="rounded-3xl border border-white/30 bg-white/20 backdrop-blur-2xl shadow-2xl shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 hover:scale-[1.02]">
+                  <div className="p-8">
+                    <div className="flex items-start gap-6">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 via-indigo-600 to-violet-700 p-4 shadow-lg shadow-purple-500/30">
                         <Phone className="w-full h-full text-white" />
                       </div>
-                      <div className="space-y-1">
-                        <h3 className="font-semibold text-lg">Call Us</h3>
-                        <a href="tel:+919342408432" className="block text-muted-foreground hover:text-primary transition-colors">
+                      <div className="space-y-3">
+                        <h3 className="font-bold text-xl text-black">Call Us</h3>
+                        <a href="tel:+919342408432" className="block text-black/70 hover:text-purple-600 transition-colors text-lg font-medium">
                           +91 9342 408 432
                         </a>
-                        <a href="tel:+919514408432" className="block text-muted-foreground hover:text-primary transition-colors">
+                        <a href="tel:+919514408432" className="block text-black/70 hover:text-purple-600 transition-colors text-lg font-medium">
                           +91 9514 408 432
                         </a>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
-                <Card className="glass">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3">
+                <div className="rounded-3xl border border-white/30 bg-white/20 backdrop-blur-2xl shadow-2xl shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 hover:scale-[1.02]">
+                  <div className="p-8">
+                    <div className="flex items-start gap-6">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 via-indigo-600 to-violet-700 p-4 shadow-lg shadow-purple-500/30">
                         <MapPin className="w-full h-full text-white" />
                       </div>
-                      <div className="space-y-1">
-                        <h3 className="font-semibold text-lg">Visit Us</h3>
-                        <p className="text-muted-foreground">Chennai, Tamil Nadu</p>
-                        <p className="text-muted-foreground">India</p>
+                      <div className="space-y-3">
+                        <h3 className="font-bold text-xl text-black">Visit Us</h3>
+                        <p className="text-black/70 text-lg">Chennai, Tamil Nadu</p>
+                        <p className="text-black/70 text-lg">India</p>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
-                <Card className="glass">
-                  <CardContent className="p-6">
-                    <div className="flex items-start gap-4">
-                      <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3">
+                <div className="rounded-3xl border border-white/30 bg-white/20 backdrop-blur-2xl shadow-2xl shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 hover:scale-[1.02]">
+                  <div className="p-8">
+                    <div className="flex items-start gap-6">
+                      <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 via-indigo-600 to-violet-700 p-4 shadow-lg shadow-purple-500/30">
                         <Clock className="w-full h-full text-white" />
                       </div>
-                      <div className="space-y-1">
-                        <h3 className="font-semibold text-lg">Response Time</h3>
-                        <p className="text-muted-foreground">Within 24 hours</p>
-                        <p className="text-muted-foreground">Monday - Friday, 9 AM - 6 PM IST</p>
+                      <div className="space-y-3">
+                        <h3 className="font-bold text-xl text-black">Response Time</h3>
+                        <p className="text-black/70 text-lg">Within 24 hours</p>
+                        <p className="text-black/70 text-lg">Monday - Friday, 9 AM - 6 PM IST</p>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
 
                 {/* Social Media */}
-                <Card className="glass">
-                  <CardContent className="p-6">
-                    <div className="space-y-4">
-                      <h3 className="font-semibold text-lg flex items-center gap-3">
-                        <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3">
+                <div className="rounded-3xl border border-white/30 bg-white/20 backdrop-blur-2xl shadow-2xl shadow-purple-500/10 hover:shadow-purple-500/20 transition-all duration-300 hover:scale-[1.02]">
+                  <div className="p-8">
+                    <div className="space-y-6">
+                      <h3 className="font-bold text-xl text-black flex items-center gap-4">
+                        <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-purple-600 via-indigo-600 to-violet-700 p-4 shadow-lg shadow-purple-500/30">
                           <Linkedin className="w-full h-full text-white" />
                         </div>
                         Follow Us
                       </h3>
-                      <div className="flex items-center gap-4">
-                        <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                          <Linkedin className="w-5 h-5" />
-                          <span>LinkedIn</span>
+                      <div className="flex items-center gap-6">
+                        <a href="#" className="flex items-center gap-3 text-black/70 hover:text-purple-600 transition-all duration-300 hover:scale-105 p-3 rounded-xl hover:bg-purple-100/20">
+                          <Linkedin className="w-6 h-6" />
+                          <span className="font-medium">LinkedIn</span>
                         </a>
-                        <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                          <Instagram className="w-5 h-5" />
-                          <span>Instagram</span>
+                        <a href="#" className="flex items-center gap-3 text-black/70 hover:text-purple-600 transition-all duration-300 hover:scale-105 p-3 rounded-xl hover:bg-purple-100/20">
+                          <Instagram className="w-6 h-6" />
+                          <span className="font-medium">Instagram</span>
                         </a>
-                        <a href="#" className="flex items-center gap-2 text-muted-foreground hover:text-primary transition-colors">
-                          <Twitter className="w-5 h-5" />
-                          <span>Twitter</span>
+                        <a href="#" className="flex items-center gap-3 text-black/70 hover:text-purple-600 transition-all duration-300 hover:scale-105 p-3 rounded-xl hover:bg-purple-100/20">
+                          <Twitter className="w-6 h-6" />
+                          <span className="font-medium">Twitter</span>
                         </a>
                       </div>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               </div>
             </div>
 
             {/* Contact Form */}
-            <Card className="glass">
-              <CardHeader>
-                <CardTitle className="text-2xl flex items-center gap-3">
-                  <MessageSquare className="w-6 h-6 text-primary" />
-                  Send us a message
-                </CardTitle>
-                <CardDescription>
-                  Tell us about your project and we'll get back to you with a detailed proposal.
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div className="space-y-2">
-                      <Label htmlFor="name">Full Name</Label>
-                      <Input id="name" name="name" placeholder="John Doe" required />
+            <div className="rounded-3xl border border-white/30 bg-white/20 backdrop-blur-2xl shadow-2xl shadow-purple-500/10">
+              <div className="p-8">
+                <div className="space-y-4 mb-8">
+                  <h2 className="text-3xl font-black text-black flex items-center gap-4">
+                    <MessageSquare className="w-8 h-8 text-purple-600" />
+                    Send us a message
+                  </h2>
+                  <p className="text-black/70 text-lg">
+                    Tell us about your project and we'll get back to you with a detailed proposal.
+                  </p>
+                </div>
+                <form onSubmit={handleSubmit} className="space-y-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div className="space-y-3">
+                      <Label htmlFor="name" className="text-black font-semibold text-lg">Full Name</Label>
+                      <Input 
+                        id="name" 
+                        name="name" 
+                        placeholder="John Doe" 
+                        required 
+                        className="rounded-2xl border-white/30 bg-white/30 backdrop-blur-xl text-black placeholder:text-black/50 h-14 text-lg focus:border-purple-500 focus:ring-purple-500"
+                      />
                     </div>
-                    <div className="space-y-2">
-                      <Label htmlFor="email">Email Address</Label>
-                      <Input id="email" name="email" type="email" placeholder="john@company.com" required />
+                    <div className="space-y-3">
+                      <Label htmlFor="email" className="text-black font-semibold text-lg">Email Address</Label>
+                      <Input 
+                        id="email" 
+                        name="email" 
+                        type="email" 
+                        placeholder="john@company.com" 
+                        required 
+                        className="rounded-2xl border-white/30 bg-white/30 backdrop-blur-xl text-black placeholder:text-black/50 h-14 text-lg focus:border-purple-500 focus:ring-purple-500"
+                      />
                     </div>
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="subject">Subject</Label>
-                    <Input id="subject" name="subject" placeholder="Project inquiry / Internship application" />
+                  <div className="space-y-3">
+                    <Label htmlFor="subject" className="text-black font-semibold text-lg">Subject</Label>
+                    <Input 
+                      id="subject" 
+                      name="subject" 
+                      placeholder="Project inquiry / Internship application" 
+                      className="rounded-2xl border-white/30 bg-white/30 backdrop-blur-xl text-black placeholder:text-black/50 h-14 text-lg focus:border-purple-500 focus:ring-purple-500"
+                    />
                   </div>
-                  <div className="space-y-2">
-                    <Label htmlFor="message">Message</Label>
+                  <div className="space-y-3">
+                    <Label htmlFor="message" className="text-black font-semibold text-lg">Message</Label>
                     <Textarea
                       id="message"
                       name="message"
                       placeholder="Tell us about your project requirements, timeline, budget, or any questions you have..."
-                      className="min-h-[150px]"
+                      className="min-h-[180px] rounded-2xl border-white/30 bg-white/30 backdrop-blur-xl text-black placeholder:text-black/50 text-lg focus:border-purple-500 focus:ring-purple-500"
                       required
                     />
                   </div>
-                  <Button type="submit" disabled={loading} size="lg" variant="hero" className="w-full">
-                    <Send className="w-4 h-4 mr-2" />
+                  <Button 
+                    type="submit" 
+                    disabled={loading} 
+                    size="lg" 
+                    className="w-full h-16 text-lg font-bold bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:from-purple-700 hover:to-indigo-700 rounded-2xl shadow-lg shadow-purple-500/30 hover:scale-[1.02] transition-all duration-300"
+                  >
+                    <Send className="w-5 h-5 mr-3" />
                     {loading ? "Sending..." : "Send Message"}
                   </Button>
                 </form>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           </div>
         </div>
       </section>

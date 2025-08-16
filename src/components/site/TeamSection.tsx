@@ -1,8 +1,6 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Crown, Zap, Code, Palette, Database, Brain } from "lucide-react";
-import ceoPic from "@/assets/team-ceo.jpg";
-import ctoPic from "@/assets/team-cto.jpg";
 
 const TeamSection = () => {
   const teamMembers = [
@@ -10,7 +8,7 @@ const TeamSection = () => {
       name: "Sabari Raja",
       role: "Chief Executive Officer",
       type: "ceo",
-      image: ceoPic,
+      image: "/team/sabari-raja.jpg",
       icon: Crown,
       description: "Visionary leader driving innovation and strategic growth at Zapsters.",
       expertise: ["Strategic Planning", "Business Development", "Team Leadership"]
@@ -19,7 +17,7 @@ const TeamSection = () => {
       name: "Rahul",
       role: "Chief Technology Officer",
       type: "cto",
-      image: ctoPic,
+      image: "/team/rahul-cropped.jpg",
       icon: Zap,
       description: "Tech mastermind architecting scalable solutions and cutting-edge systems.",
       expertise: ["System Architecture", "Cloud Infrastructure", "Technical Strategy"]
@@ -72,7 +70,15 @@ const TeamSection = () => {
                 <div className="p-8 md:p-12">
                   <div className={`flex flex-col ${member.type === 'ceo' ? 'md:flex-row' : ''} items-center gap-8`}>
                     {/* Photo */}
-                    <div className={`relative ${member.type === 'ceo' ? 'w-48 h-48' : 'w-32 h-32'}`}>
+                    <div
+                      className={`relative ${
+                        member.type === "ceo"
+                          ? "w-48 h-48"
+                          : member.name === "Rahul"
+                          ? "w-40 h-40"
+                          : "w-32 h-32"
+                      }`}
+                    >
                       <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-purple-400/30 group-hover:border-purple-400/60 transition-colors">
                         <img
                           src={member.image}

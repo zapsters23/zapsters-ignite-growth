@@ -61,6 +61,7 @@ const Index = () => {
       },
     ],
   };
+
   return (
     <>
       <Helmet>
@@ -75,35 +76,37 @@ const Index = () => {
         <script type="application/ld+json">{JSON.stringify(faqSchema)}</script>
       </Helmet>
 
+      {/* Hero */}
       <HeroModern />
 
+      {/* Services */}
       <ServicesGrid />
 
-      <section id="legacy-services" className="py-16 md:py-24">
+      <section id="legacy-services" className="py-16 md:py-24 text-black">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Services</h2>
-          <p className="mt-2 text-muted-foreground max-w-2xl">
+          <p className="mt-2 text-gray-600 max-w-2xl">
             From first pixel to final deploy — a full-stack partner for ambitious teams.
           </p>
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <article className="group rounded-xl border glass p-6 shadow-sm hover:shadow-md transition-shadow hover-scale">
-              <Code2 className="text-primary" />
+            <article className="group rounded-2xl border glass p-6 shadow-md hover:shadow-lg transition-all">
+              <Code2 className="text-indigo-600" />
               <h3 className="mt-4 text-xl font-semibold">Web Development</h3>
-              <p className="mt-2 text-muted-foreground">
+              <p className="mt-2 text-gray-600">
                 Robust, scalable web apps using modern stacks with performance at heart.
               </p>
             </article>
-            <article className="group rounded-xl border glass p-6 shadow-sm hover:shadow-md transition-shadow hover-scale">
-              <Palette className="text-primary" />
+            <article className="group rounded-2xl border glass p-6 shadow-md hover:shadow-lg transition-all">
+              <Palette className="text-indigo-600" />
               <h3 className="mt-4 text-xl font-semibold">UI/UX Design</h3>
-              <p className="mt-2 text-muted-foreground">
+              <p className="mt-2 text-gray-600">
                 Human-centered interfaces that look great and feel effortless.
               </p>
             </article>
-            <article className="group rounded-xl border glass p-6 shadow-sm hover:shadow-md transition-shadow hover-scale">
-              <GraduationCap className="text-primary" />
+            <article className="group rounded-2xl border glass p-6 shadow-md hover:shadow-lg transition-all">
+              <GraduationCap className="text-indigo-600" />
               <h3 className="mt-4 text-xl font-semibold">Internships</h3>
-              <p className="mt-2 text-muted-foreground">
+              <p className="mt-2 text-gray-600">
                 We connect motivated students with real projects and mentorship.
               </p>
             </article>
@@ -111,17 +114,17 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="internships" className="py-16">
+      {/* Internships */}
+      <section id="internships" className="py-16 text-black">
         <div className="mx-auto max-w-5xl">
-          <div className="relative overflow-hidden rounded-2xl border glass p-8 md:p-12 shadow-[var(--shadow-elegant)]">
-            <div className="absolute inset-0 -z-10 opacity-40 bg-[var(--gradient-primary)]" />
+          <div className="relative overflow-hidden rounded-2xl border glass p-8 md:p-12 shadow-lg">
             <div className="relative">
               <h2 className="text-2xl md:text-3xl font-bold">Zapsters Internship Program</h2>
-              <p className="mt-3 text-muted-foreground max-w-2xl">
+              <p className="mt-3 text-gray-600 max-w-2xl">
                 Hands-on experience with guidance from senior engineers and designers. Build a portfolio that stands out.
               </p>
               <div className="mt-6">
-                <Button asChild variant="secondary">
+                <Button asChild className="bg-indigo-600 text-white rounded-xl px-6 py-2 shadow-md hover:shadow-lg">
                   <Link to="/contact">Apply now</Link>
                 </Button>
               </div>
@@ -130,115 +133,85 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="work" className="py-16 md:py-24">
+      {/* Featured Work */}
+      <section id="work" className="py-16 md:py-24 text-black">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Featured Work</h2>
-          <p className="mt-2 text-muted-foreground max-w-2xl">A taste of the builds and designs we love. More on request.</p>
+          <p className="mt-2 text-gray-600 max-w-2xl">A taste of the builds and designs we love. More on request.</p>
           <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <article className="rounded-xl border glass p-6 shadow-sm hover:shadow-md transition-shadow hover-scale">
-              <Rocket className="text-primary" />
+            <article className="rounded-2xl border glass p-6 shadow-md hover:shadow-lg transition-all">
+              <Rocket className="text-indigo-600" />
               <h3 className="mt-4 text-xl font-semibold">SaaS Dashboard</h3>
-              <p className="mt-2 text-muted-foreground">Realtime analytics, billing, and teams. 99+ Lighthouse score.</p>
+              <p className="mt-2 text-gray-600">Realtime analytics, billing, and teams. 99+ Lighthouse score.</p>
             </article>
-            <article className="rounded-xl border glass p-6 shadow-sm hover:shadow-md transition-shadow hover-scale">
-              <Sparkles className="text-primary" />
-              <h3 className="mt-4 text-xl font-semibold">E‑commerce Revamp</h3>
-              <p className="mt-2 text-muted-foreground">Headless storefront with blazing performance and smooth UX.</p>
+            <article className="rounded-2xl border glass p-6 shadow-md hover:shadow-lg transition-all">
+              <Sparkles className="text-indigo-600" />
+              <h3 className="mt-4 text-xl font-semibold">E-commerce Revamp</h3>
+              <p className="mt-2 text-gray-600">Headless storefront with blazing performance and smooth UX.</p>
             </article>
-            <article className="rounded-xl border glass p-6 shadow-sm hover:shadow-md transition-shadow hover-scale">
-              <Shield className="text-primary" />
+            <article className="rounded-2xl border glass p-6 shadow-md hover:shadow-lg transition-all">
+              <Shield className="text-indigo-600" />
               <h3 className="mt-4 text-xl font-semibold">Gov Portal UI</h3>
-              <p className="mt-2 text-muted-foreground">Accessible, responsive, and secure by default for all citizens.</p>
+              <p className="mt-2 text-gray-600">Accessible, responsive, and secure by default for all citizens.</p>
             </article>
           </div>
         </div>
       </section>
 
       <TestimonialsSection />
-      
       <TeamSection />
-      
-      {/* Events Section */}
-      <section className="py-20 md:py-32 relative">
-        <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-grid-pattern opacity-15" />
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: "radial-gradient(1000px circle at 70% 30%, hsl(var(--brand-1) / 0.1), transparent 70%)"
-            }}
-          />
-        </div>
-        
+
+      {/* Events */}
+      <section className="py-20 md:py-32 text-black relative">
         <div className="container">
-          <div className="text-center space-y-6 mb-16 slide-up">
+          <div className="text-center space-y-6 mb-16">
             <h2 className="text-4xl md:text-6xl font-black tracking-tight">
-              <span className="bg-[var(--gradient-primary)] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-indigo-500 to-indigo-700 bg-clip-text text-transparent">
                 Our Latest
               </span>
               <br />
-              <span className="text-foreground">Events & Workshops</span>
+              <span>Events & Workshops</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto font-light leading-relaxed">
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
               Driving innovation through knowledge sharing and community engagement
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Event 1 */}
-            <Card className="group glass hover-lift slide-up">
+            {/* Noctivus */}
+            <Card className="group glass rounded-2xl shadow-lg hover:shadow-xl transition-all">
               <CardContent className="p-8 space-y-6">
-                <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-indigo-600 p-3 group-hover:scale-110 transition-transform">
                   <Shield className="w-full h-full text-white" />
                 </div>
-                
                 <div className="space-y-3">
-                  <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
-                    Noctivus '25 Cybersecurity Symposium
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="text-2xl font-bold">Noctivus '25 Cybersecurity Symposium</h3>
+                  <p className="text-gray-600">
                     National level cybersecurity symposium conducted at Velammal Engineering College, featuring workshops on ethical hacking, penetration testing, and modern security practices.
                   </p>
                 </div>
-                
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>January 2025</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>Velammal Engineering College</span>
-                  </div>
+                <div className="flex items-center gap-4 text-sm text-gray-500">
+                  <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>January 2025</span></div>
+                  <div className="flex items-center gap-2"><MapPin className="w-4 h-4" /><span>Velammal Engineering College</span></div>
                 </div>
               </CardContent>
             </Card>
 
-            {/* Event 2 */}
-            <Card className="group glass hover-lift slide-up" style={{ animationDelay: "0.2s" }}>
+            {/* Panimalar */}
+            <Card className="group glass rounded-2xl shadow-lg hover:shadow-xl transition-all">
               <CardContent className="p-8 space-y-6">
-                <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3 group-hover:scale-110 transition-transform">
+                <div className="w-12 h-12 rounded-xl bg-indigo-600 p-3 group-hover:scale-110 transition-transform">
                   <Palette className="w-full h-full text-white" />
                 </div>
-                
                 <div className="space-y-3">
-                  <h3 className="text-2xl font-bold group-hover:text-primary transition-colors">
-                    Panimalar UI/UX Workshop
-                  </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <h3 className="text-2xl font-bold">Panimalar UI/UX Workshop</h3>
+                  <p className="text-gray-600">
                     Comprehensive hands-on workshop on modern UI/UX design principles, prototyping tools, and user research methodologies for aspiring designers.
                   </p>
                 </div>
-                
-                <div className="flex items-center gap-4 text-sm text-muted-foreground">
-                  <div className="flex items-center gap-2">
-                    <Calendar className="w-4 h-4" />
-                    <span>December 2024</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <MapPin className="w-4 h-4" />
-                    <span>Panimalar Engineering College</span>
-                  </div>
+                <div className="flex items-center gap-4 text-sm text-gray-500">
+                  <div className="flex items-center gap-2"><Calendar className="w-4 h-4" /><span>December 2024</span></div>
+                  <div className="flex items-center gap-2"><MapPin className="w-4 h-4" /><span>Panimalar Engineering College</span></div>
                 </div>
               </CardContent>
             </Card>
@@ -246,7 +219,8 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="faq" className="py-16 md:py-24">
+      {/* FAQ */}
+      <section id="faq" className="py-16 md:py-24 text-black">
         <div className="mx-auto max-w-3xl">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-center">FAQ</h2>
           <Accordion type="single" collapsible className="mt-8">
@@ -272,14 +246,15 @@ const Index = () => {
         </div>
       </section>
 
-      <section className="py-16 md:py-24">
+      {/* CTA */}
+      <section className="py-16 md:py-24 text-black">
         <div className="mx-auto max-w-4xl text-center">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Ready to build something great?</h2>
-          <p className="mt-3 text-muted-foreground">
+          <p className="mt-3 text-gray-600">
             Tell us about your idea — we'll turn it into a product people love.
           </p>
           <div className="mt-8">
-            <Button className="bg-indigo-600">
+            <Button className="bg-indigo-600 text-white rounded-xl px-6 py-2 shadow-md hover:shadow-lg">
               <Link to="/contact">Get in touch</Link>
             </Button>
           </div>

@@ -57,7 +57,7 @@ const TestimonialsSection = () => {
           <h2 className="text-4xl md:text-6xl font-black tracking-tight text-black">
             What Our Clients
             <br />
-            <span className="text-indigo-600">Say About Us</span>
+            <span className="text-purple-600">Say About Us</span>
           </h2>
           <p className="text-xl text-black/70 max-w-3xl mx-auto font-light leading-relaxed">
             Don't just take our word for it. Here's what industry leaders say
@@ -68,52 +68,50 @@ const TestimonialsSection = () => {
         {/* Testimonials */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
-            <Card
+            <div
               key={testimonial.name}
-              className="group border border-black/10 bg-white/80 backdrop-blur-xl hover:bg-white/90 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-400/50 animate-fade-in"
+              className="group border border-white/20 bg-white/10 backdrop-blur-xl rounded-2xl p-8 space-y-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 animate-fade-in"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
-              <CardContent className="p-8 space-y-6">
-                {/* Quote Icon */}
-                <div className="w-12 h-12 rounded-xl bg-indigo-600 p-3 group-hover:scale-110 transition-transform shadow-lg">
-                  <Quote className="w-full h-full text-white" />
+              {/* Quote Icon */}
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 p-3 group-hover:scale-110 transition-transform shadow-lg">
+                <Quote className="w-full h-full text-white" />
+              </div>
+
+              {/* Rating */}
+              <div className="flex items-center gap-1">
+                {[...Array(testimonial.rating)].map((_, i) => (
+                  <Star
+                    key={i}
+                    className="w-4 h-4 fill-purple-500 text-purple-500"
+                  />
+                ))}
+              </div>
+
+              {/* Content */}
+              <blockquote className="text-lg leading-relaxed text-black">
+                "{testimonial.content}"
+              </blockquote>
+
+              {/* Author */}
+              <div className="flex items-center gap-4 pt-4 border-t border-white/20">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-purple-400/50">
+                  <img
+                    src={testimonial.image}
+                    alt={testimonial.name}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-
-                {/* Rating */}
-                <div className="flex items-center gap-1">
-                  {[...Array(testimonial.rating)].map((_, i) => (
-                    <Star
-                      key={i}
-                      className="w-4 h-4 fill-indigo-500 text-indigo-500"
-                    />
-                  ))}
-                </div>
-
-                {/* Content */}
-                <blockquote className="text-lg leading-relaxed text-black">
-                  "{testimonial.content}"
-                </blockquote>
-
-                {/* Author */}
-                <div className="flex items-center gap-4 pt-4 border-t border-black/10">
-                  <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-indigo-400/50">
-                    <img
-                      src={testimonial.image}
-                      alt={testimonial.name}
-                      className="w-full h-full object-cover"
-                    />
+                <div>
+                  <div className="font-semibold text-black">
+                    {testimonial.name}
                   </div>
-                  <div>
-                    <div className="font-semibold text-black">
-                      {testimonial.name}
-                    </div>
-                    <div className="text-sm text-black/60">
-                      {testimonial.role}
-                    </div>
+                  <div className="text-sm text-black/60">
+                    {testimonial.role}
                   </div>
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>

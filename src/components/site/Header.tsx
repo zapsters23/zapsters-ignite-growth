@@ -19,7 +19,8 @@ const Header = () => {
         <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
           {[
             { to: "/", label: "Home" },
-            { to: "/projects", label: "Projects" },
+            { to: "/services", label: "Services" },
+            { to: "/events", label: "Events" },
             { to: "/team", label: "Team" },
             { to: "/internships", label: "Internships" },
             { to: "/contact", label: "Contact" },

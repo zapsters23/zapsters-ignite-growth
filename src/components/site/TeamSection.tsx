@@ -65,23 +65,23 @@ const TeamSection = () => {
           {teamMembers.map((member, index) => {
             const Icon = member.icon;
             return (
-              <Card
+              <div
                 key={member.name}
-                className={`group border border-black/20 bg-white backdrop-blur-xl hover:bg-black/5 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 animate-fade-in ${member.type === 'ceo' ? 'lg:col-span-2 max-w-4xl mx-auto' : ''}`}
+                className={`group border border-white/20 bg-white/10 backdrop-blur-xl rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 animate-fade-in ${member.type === 'ceo' ? 'lg:col-span-2 max-w-4xl mx-auto' : ''}`}
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
-                <CardContent className="p-8 md:p-12">
+                <div className="p-8 md:p-12">
                   <div className={`flex flex-col ${member.type === 'ceo' ? 'md:flex-row' : ''} items-center gap-8`}>
                     {/* Photo */}
                     <div className={`relative ${member.type === 'ceo' ? 'w-48 h-48' : 'w-32 h-32'}`}>
-                      <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-indigo-400/30 group-hover:border-indigo-400/60 transition-colors">
+                      <div className="w-full h-full rounded-2xl overflow-hidden border-4 border-purple-400/30 group-hover:border-purple-400/60 transition-colors">
                         <img
                           src={member.image}
                           alt={member.name}
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <div className="absolute -top-3 -right-3 w-12 h-12 rounded-xl bg-indigo-600 p-3 group-hover:scale-110 transition-transform shadow-lg">
+                      <div className="absolute -top-3 -right-3 w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 p-3 group-hover:scale-110 transition-transform shadow-lg">
                         <Icon className="w-full h-full text-white" />
                       </div>
                     </div>
@@ -101,15 +101,15 @@ const TeamSection = () => {
 
                       <div className="flex flex-wrap gap-2 justify-center md:justify-start">
                         {member.expertise.map((skill) => (
-                          <Badge key={skill} className="bg-black/5 text-black border-black/20 hover:bg-black/10">
+                          <div key={skill} className="bg-white/20 text-black border border-white/30 hover:bg-white/30 px-3 py-1 rounded-full text-sm transition-colors">
                             {skill}
-                          </Badge>
+                          </div>
                         ))}
                       </div>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
+                </div>
+              </div>
             );
           })}
         </div>
@@ -124,13 +124,13 @@ const TeamSection = () => {
             {techTeam.map((member, index) => {
               const Icon = member.icon;
               return (
-                <Card
+                <div
                   key={member.name}
-                  className="group border border-black/20 bg-white backdrop-blur-xl hover:bg-black/5 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-indigo-500/50 text-center animate-fade-in"
+                  className="group border border-white/20 bg-white/10 backdrop-blur-xl rounded-2xl text-center transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 animate-fade-in"
                   style={{ animationDelay: `${index * 0.1}s` }}
                 >
-                  <CardContent className="p-6 space-y-4">
-                    <div className="w-16 h-16 mx-auto rounded-xl bg-indigo-600 p-4 group-hover:scale-110 transition-transform shadow-lg">
+                  <div className="p-6 space-y-4">
+                    <div className="w-16 h-16 mx-auto rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 p-4 group-hover:scale-110 transition-transform shadow-lg">
                       <Icon className="w-full h-full text-white" />
                     </div>
                     <div>
@@ -139,8 +139,8 @@ const TeamSection = () => {
                       </h4>
                       <p className="text-sm text-black/60">{member.expertise}</p>
                     </div>
-                  </CardContent>
-                </Card>
+                  </div>
+                </div>
               );
             })}
           </div>

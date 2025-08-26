@@ -132,32 +132,6 @@ const Index = () => {
           </div>
         </div>
       </section>
-
-      {/* Featured Work */}
-      <section id="work" className="py-16 md:py-24 text-black">
-        <div className="mx-auto max-w-5xl">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">Featured Work</h2>
-          <p className="mt-2 text-gray-600 max-w-2xl">A taste of the builds and designs we love. More on request.</p>
-          <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6">
-            <article className="rounded-2xl border glass p-6 shadow-md hover:shadow-lg transition-all">
-              <Rocket className="text-indigo-600" />
-              <h3 className="mt-4 text-xl font-semibold">SaaS Dashboard</h3>
-              <p className="mt-2 text-gray-600">Realtime analytics, billing, and teams. 99+ Lighthouse score.</p>
-            </article>
-            <article className="rounded-2xl border glass p-6 shadow-md hover:shadow-lg transition-all">
-              <Sparkles className="text-indigo-600" />
-              <h3 className="mt-4 text-xl font-semibold">E-commerce Revamp</h3>
-              <p className="mt-2 text-gray-600">Headless storefront with blazing performance and smooth UX.</p>
-            </article>
-            <article className="rounded-2xl border glass p-6 shadow-md hover:shadow-lg transition-all">
-              <Shield className="text-indigo-600" />
-              <h3 className="mt-4 text-xl font-semibold">Gov Portal UI</h3>
-              <p className="mt-2 text-gray-600">Accessible, responsive, and secure by default for all citizens.</p>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <TestimonialsSection />
       <TeamSection />
 

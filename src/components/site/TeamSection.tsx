@@ -55,7 +55,7 @@ const TeamSection = () => {
           <p className="text-xl text-black/80 max-w-3xl mx-auto font-light leading-relaxed">
             Passionate leaders and expert engineers working together to deliver exceptional results.
           </p>
-        </div>
+        </div>wdaw
 
         {/* Leadership */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-20">

@@ -77,27 +77,21 @@ const Internships = () => {
         <script type="application/ld+json">{JSON.stringify(internshipSchema)}</script>
       </Helmet>
 
-      <section className="py-20 md:py-32 relative">
+      <section className="py-20 md:py-32 relative bg-black">
         <div className="absolute inset-0 -z-10">
-          <div className="absolute inset-0 bg-grid-pattern opacity-20" />
-          <div 
-            className="absolute inset-0"
-            style={{
-              background: "radial-gradient(1000px circle at 30% 20%, hsl(var(--brand-2) / 0.15), transparent 60%)"
-            }}
-          />
+          <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:50px_50px] opacity-20" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-indigo-900/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
+          <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-violet-900/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
         </div>
 
         <div className="container">
           {/* Hero Section */}
           <div className="text-center space-y-8 mb-20">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border glass">
-              <GraduationCap className="w-5 h-5 text-primary" />
-              <span className="text-sm font-medium">Zapsters Internship Program</span>
-            </div>
+
             
             <h1 className="text-5xl md:text-7xl font-black tracking-tight">
-              <span className="bg-[var(--gradient-primary)] bg-clip-text text-transparent">
+              <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-violet-600 bg-clip-text text-transparent">
                 Launch Your
               </span>
               <br />
@@ -115,12 +109,12 @@ const Internships = () => {
               </div>
               <div className="w-px h-12 bg-border"></div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">100+</div>
+                <div className="text-3xl font-bold text-primary">200+</div>
                 <div className="text-sm text-muted-foreground">Successful Interns</div>
               </div>
               <div className="w-px h-12 bg-border"></div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-primary">6</div>
+                <div className="text-3xl font-bold text-primary">1</div>
                 <div className="text-sm text-muted-foreground">Month Program</div>
               </div>
             </div>
@@ -134,9 +128,9 @@ const Internships = () => {
           {categories.map((category) => (
             <div key={category} className="mb-16">
               <h2 className="text-3xl font-bold mb-6 flex items-center gap-3">
-                <span className="bg-[var(--gradient-primary)] bg-clip-text text-transparent">
-                  {category}
-                </span>
+                <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-violet-600 bg-clip-text text-transparent">
+                {category}
+              </span>
                 <div className="flex-1 h-px bg-gradient-to-r from-border to-transparent"></div>
               </h2>
               
@@ -146,10 +140,10 @@ const Internships = () => {
                   .map((service) => {
                     const Icon = service.icon;
                     return (
-                      <Card key={service.name} className="group hover-scale glass hover:shadow-[var(--shadow-glow)] transition-all duration-300">
+                      <Card key={service.name} className="group hover-scale rounded-3xl border border-white/10 bg-white/5 hover:shadow-[0_0_15px_rgba(139,92,246,0.3)] transition-all duration-300">
                         <CardHeader className="pb-4">
                           <div className="flex items-start justify-between">
-                            <div className="w-12 h-12 rounded-xl bg-[var(--gradient-primary)] p-3 group-hover:scale-110 transition-transform">
+                            <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-500 via-indigo-500 to-violet-600 p-3 group-hover:scale-110 transition-transform">
                               <Icon className="w-full h-full text-white" />
                             </div>
                             <Badge className={levelColors[service.level as keyof typeof levelColors]}>
@@ -183,7 +177,7 @@ const Internships = () => {
           ))}
 
           {/* CTA Section */}
-          <div className="text-center mt-20 p-12 rounded-3xl border glass">
+          <div className="text-center mt-20 p-12 rounded-3xl border border-white/10 bg-white/5">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
               Ready to Start Your Journey?
             </h2>
@@ -194,7 +188,7 @@ const Internships = () => {
               <Button asChild size="lg" variant="hero">
                 <Link to="/contact">Apply for Internship</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="glass">
+              <Button asChild size="lg" variant="outline" className="border-white/10 bg-white/5 hover:bg-white/10">
                 <Link to="/team">Meet Our Team</Link>
               </Button>
             </div>

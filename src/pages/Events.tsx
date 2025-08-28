@@ -48,21 +48,28 @@ const Events = () => {
         <meta name="description" content="Join our exciting tech events including Noctivus '25, workshops, and networking sessions. Stay updated with the latest in technology." />
       </Helmet>
 
-      <main className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+      <main className="min-h-screen bg-black">
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-200/40 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-indigo-200/40 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
-          <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-violet-200/35 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-indigo-900/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
+          <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-violet-900/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
+          <div 
+            className="absolute inset-0 opacity-10"
+            style={{
+              backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.3) 2px, transparent 0)",
+              backgroundSize: "60px 60px"
+            }}
+          />
         </div>
 
         <div className="container pt-24 pb-16">
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
-            <h1 className="text-4xl md:text-6xl font-black tracking-tight text-black">
+            <h1 className="text-4xl md:text-6xl font-black tracking-tight text-white">
               Our <span className="text-purple-600">Events</span>
             </h1>
-            <p className="text-xl text-black/70 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
               Join us for exciting tech events, workshops, and networking opportunities that drive innovation and learning.
             </p>
           </div>
@@ -70,7 +77,7 @@ const Events = () => {
           {/* Featured Event - Noctivus */}
           {featuredEvent && (
             <div className="mb-16">
-              <div className="rounded-3xl border border-white/20 bg-white/10 backdrop-blur-xl p-8 md:p-12 shadow-2xl animate-fade-in">
+              <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 md:p-12 shadow-2xl animate-fade-in">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
                   {/* Event Info */}
                   <div className="space-y-6">
@@ -79,34 +86,34 @@ const Events = () => {
                       <span className="text-sm font-medium text-purple-600">Featured Event</span>
                     </div>
                     
-                    <h2 className="text-3xl md:text-4xl font-black text-black">
+                    <h2 className="text-3xl md:text-4xl font-black text-white">
                       {featuredEvent.name}
                     </h2>
                     
-                    <p className="text-lg text-black/70 leading-relaxed">
+                    <p className="text-lg text-white/70 leading-relaxed">
                       {featuredEvent.description}
                     </p>
 
                     <div className="space-y-3">
-                      <div className="flex items-center gap-3 text-black/80">
+                      <div className="flex items-center gap-3 text-white/80">
                         <Calendar className="w-5 h-5 text-purple-600" />
                         <span>{featuredEvent.date}</span>
                       </div>
-                      <div className="flex items-center gap-3 text-black/80">
+                      <div className="flex items-center gap-3 text-white/80">
                         <MapPin className="w-5 h-5 text-purple-600" />
                         <span>{featuredEvent.location}</span>
                       </div>
-                      <div className="flex items-center gap-3 text-black/80">
+                      <div className="flex items-center gap-3 text-white/80">
                         <Users className="w-5 h-5 text-purple-600" />
                         <span>{featuredEvent.attendees} Expected Attendees</span>
                       </div>
                     </div>
 
                     <div className="space-y-3">
-                      <h3 className="text-lg font-semibold text-black">Event Highlights:</h3>
+                      <h3 className="text-lg font-semibold text-white">Event Highlights:</h3>
                       <ul className="space-y-2">
                         {featuredEvent.highlights.map((highlight, index) => (
-                          <li key={index} className="flex items-center gap-2 text-black/70">
+                          <li key={index} className="flex items-center gap-2 text-white/70">
                             <div className="w-2 h-2 rounded-full bg-purple-600"></div>
                             {highlight}
                           </li>
@@ -125,7 +132,7 @@ const Events = () => {
                       <div className="w-20 h-20 rounded-2xl bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center mx-auto">
                         <Calendar className="w-10 h-10 text-white" />
                       </div>
-                      <div className="text-black/60">
+                      <div className="text-white/60">
                         <p className="font-medium">Event Image</p>
                         <p className="text-sm">Coming Soon</p>
                       </div>
@@ -138,7 +145,7 @@ const Events = () => {
 
           {/* Other Events */}
           <div className="space-y-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-black text-center mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-white text-center mb-8">
               Other Events
             </h2>
             
@@ -146,12 +153,12 @@ const Events = () => {
               {otherEvents.map((event, index) => (
                 <div
                   key={event.id}
-                  className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl p-8 shadow-xl animate-fade-in"
+                  className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 shadow-xl animate-fade-in"
                   style={{ animationDelay: `${index * 0.2}s` }}
                 >
                   <div className="space-y-6">
                     <div className="flex items-center justify-between">
-                      <h3 className="text-xl font-bold text-black">{event.name}</h3>
+                      <h3 className="text-xl font-bold text-white">{event.name}</h3>
                       <span className={`px-3 py-1 rounded-full text-xs font-medium ${
                         event.status === 'ongoing' 
                           ? 'bg-green-100 text-green-600 border border-green-200' 
@@ -161,30 +168,30 @@ const Events = () => {
                       </span>
                     </div>
                     
-                    <p className="text-black/70 leading-relaxed">
+                    <p className="text-white/70 leading-relaxed">
                       {event.description}
                     </p>
 
                     <div className="space-y-2">
-                      <div className="flex items-center gap-3 text-black/80">
+                      <div className="flex items-center gap-3 text-white/80">
                         <Clock className="w-4 h-4 text-purple-600" />
                         <span className="text-sm">{event.date}</span>
                       </div>
-                      <div className="flex items-center gap-3 text-black/80">
+                      <div className="flex items-center gap-3 text-white/80">
                         <MapPin className="w-4 h-4 text-purple-600" />
                         <span className="text-sm">{event.location}</span>
                       </div>
-                      <div className="flex items-center gap-3 text-black/80">
+                      <div className="flex items-center gap-3 text-white/80">
                         <Users className="w-4 h-4 text-purple-600" />
                         <span className="text-sm">{event.attendees} Participants</span>
                       </div>
                     </div>
 
                     <div className="space-y-2">
-                      <h4 className="font-medium text-black">Highlights:</h4>
+                      <h4 className="font-medium text-white">Highlights:</h4>
                       <ul className="space-y-1">
                         {event.highlights.map((highlight, idx) => (
-                          <li key={idx} className="flex items-center gap-2 text-sm text-black/70">
+                          <li key={idx} className="flex items-center gap-2 text-sm text-white/70">
                             <div className="w-1.5 h-1.5 rounded-full bg-purple-600"></div>
                             {highlight}
                           </li>
@@ -203,11 +210,11 @@ const Events = () => {
 
           {/* Contact Section */}
           <div className="text-center mt-16">
-            <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-black mb-4">
+            <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 shadow-xl">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 Want to Host an Event with Us?
               </h3>
-              <p className="text-black/70 mb-6 max-w-2xl mx-auto">
+              <p className="text-white/70 mb-6 max-w-2xl mx-auto">
                 Partner with Zapsters to create memorable tech events and workshops for your community.
               </p>
               <a

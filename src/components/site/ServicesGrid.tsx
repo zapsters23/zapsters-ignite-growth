@@ -38,16 +38,16 @@ const services = [
 
 const ServicesGrid = () => {
   return (
-    <section id="services" className="py-20 md:py-32 relative bg-gradient-to-br from-purple-50 via-indigo-50/50 to-violet-100/30">
+    <section id="services" className="py-20 md:py-32 relative bg-black">
       {/* Enhanced background shapes */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-purple-400/30 to-indigo-400/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] bg-gradient-to-r from-violet-400/25 to-purple-400/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
-        <div className="absolute top-3/4 left-1/2 w-[350px] h-[350px] bg-gradient-to-r from-indigo-400/20 to-violet-400/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
+        <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-gradient-to-r from-purple-900/20 to-indigo-900/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-1/4 right-1/3 w-[400px] h-[400px] bg-gradient-to-r from-violet-900/15 to-purple-900/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
+        <div className="absolute top-3/4 left-1/2 w-[350px] h-[350px] bg-gradient-to-r from-indigo-900/15 to-violet-900/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
         <div 
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(circle at 2px 2px, rgba(147, 51, 234, 0.3) 2px, transparent 0)",
+            backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.3) 2px, transparent 0)",
             backgroundSize: "60px 60px"
           }}
         />
@@ -56,10 +56,10 @@ const ServicesGrid = () => {
       <div className="container">
         {/* Section title */}
         <div className="text-center space-y-6 mb-16">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-black">
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-white">
             Our <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-700 bg-clip-text text-transparent">Expertise</span>
           </h2>
-          <p className="text-xl text-black/70 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
             From cutting-edge AI to robust cybersecurity, we deliver premium solutions across every technology stack
           </p>
         </div>
@@ -71,7 +71,7 @@ const ServicesGrid = () => {
             return (
               <div
                 key={service.name}
-                className="group relative rounded-3xl border border-white/30 bg-white/20 backdrop-blur-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 animate-fade-in"
+                className="group relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-2xl p-8 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 animate-fade-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className="flex flex-col items-center text-center space-y-6">
@@ -79,10 +79,10 @@ const ServicesGrid = () => {
                     <Icon className="w-full h-full text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="font-bold text-xl text-black group-hover:text-purple-600 transition-colors">
+                    <h3 className="font-bold text-xl text-white group-hover:text-purple-400 transition-colors">
                       {service.name}
                     </h3>
-                    <p className="text-base text-black/70 leading-relaxed">
+                    <p className="text-base text-white/70 leading-relaxed">
                       {service.description}
                     </p>
                   </div>

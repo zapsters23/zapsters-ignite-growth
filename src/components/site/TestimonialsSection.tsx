@@ -33,15 +33,15 @@ const testimonials = [
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 md:py-32 relative bg-gradient-to-br from-purple-50 via-indigo-50/50 to-violet-100/30">
+    <section className="py-20 md:py-32 relative bg-black">
       {/* Enhanced background shapes */}
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-purple-400/30 to-indigo-400/30 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 left-1/3 w-[400px] h-[400px] bg-gradient-to-r from-violet-400/25 to-purple-400/25 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "3s" }}></div>
+        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-purple-900/20 to-indigo-900/20 rounded-full blur-3xl animate-pulse"></div>
+        <div className="absolute bottom-0 left-1/3 w-[400px] h-[400px] bg-gradient-to-r from-violet-900/15 to-purple-900/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "3s" }}></div>
         <div
-          className="absolute inset-0 opacity-20"
+          className="absolute inset-0 opacity-10"
           style={{
-            backgroundImage: "radial-gradient(circle at 2px 2px, rgba(147, 51, 234, 0.3) 2px, transparent 0)",
+            backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.3) 2px, transparent 0)",
             backgroundSize: "50px 50px",
           }}
         />
@@ -50,12 +50,12 @@ const TestimonialsSection = () => {
       <div className="container">
         {/* Section Heading */}
         <div className="text-center space-y-6 mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-black">
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-white">
             What Our Clients
             <br />
             <span className="text-purple-600">Say About Us</span>
           </h2>
-          <p className="text-xl text-black/70 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
             Don't just take our word for it. Here's what industry leaders say
             about working with Zapsters.
           </p>
@@ -66,7 +66,7 @@ const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div
               key={testimonial.name}
-              className="group border border-white/20 bg-white/10 backdrop-blur-xl rounded-2xl p-8 space-y-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 animate-fade-in"
+              className="group border border-white/10 bg-white/5 backdrop-blur-xl rounded-3xl p-8 space-y-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 animate-fade-in"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Quote Icon */}
@@ -85,7 +85,7 @@ const TestimonialsSection = () => {
               </div>
 
               {/* Content */}
-              <blockquote className="text-lg leading-relaxed text-black">
+              <blockquote className="text-lg leading-relaxed text-white">
                 "{testimonial.content}"
               </blockquote>
 
@@ -99,10 +99,10 @@ const TestimonialsSection = () => {
                   />
                 </div>
                 <div>
-                  <div className="font-semibold text-black">
+                  <div className="font-semibold text-white">
                     {testimonial.name}
                   </div>
-                  <div className="text-sm text-black/60">
+                  <div className="text-sm text-white/60">
                     {testimonial.role}
                   </div>
                 </div>

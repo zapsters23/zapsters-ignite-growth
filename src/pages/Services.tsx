@@ -47,21 +47,22 @@ const Services = () => {
         <meta name="description" content="Explore our comprehensive tech services including web development, UI/UX design, AI/ML, cybersecurity, and more. Professional solutions for your business needs." />
       </Helmet>
 
-      <main className="min-h-screen bg-gradient-to-br from-purple-50 via-white to-indigo-50">
+      <main className="min-h-screen bg-black">
         {/* Background Elements */}
         <div className="absolute inset-0 -z-10">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-200/40 rounded-full blur-3xl animate-pulse"></div>
-          <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-indigo-200/40 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
-          <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-violet-200/35 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
+          <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-indigo-900/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
+          <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-violet-900/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
+          <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:50px_50px] opacity-20"></div>
         </div>
 
         <div className="container pt-24 pb-16">
           {/* Header */}
           <div className="text-center space-y-6 mb-16">
-            <h1 className="text-4xl md:text-6xl font-black tracking-tight text-black">
-              Our <span className="text-purple-600">Services</span>
+            <h1 className="text-4xl md:text-6xl font-black tracking-tight text-white">
+              Our <span className="text-purple-500">Services</span>
             </h1>
-            <p className="text-xl text-black/70 max-w-3xl mx-auto font-light leading-relaxed">
+            <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
               Comprehensive tech solutions across multiple domains. From cutting-edge development to innovative design.
             </p>
           </div>
@@ -69,7 +70,7 @@ const Services = () => {
           {/* Services by Category */}
           {categories.map((category, categoryIndex) => (
             <div key={category} className="mb-16">
-              <h2 className="text-2xl md:text-3xl font-bold text-black mb-8 text-center">
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-8 text-center">
                 {category}
               </h2>
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -78,7 +79,7 @@ const Services = () => {
                   return (
                     <div
                       key={service.name}
-                      className="group relative rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 animate-fade-in"
+                      className="group relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-6 transition-all duration-300 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20 animate-fade-in"
                       style={{ animationDelay: `${(categoryIndex * 0.1) + (index * 0.05)}s` }}
                     >
                       <div className="flex flex-col items-center text-center space-y-4">
@@ -86,10 +87,10 @@ const Services = () => {
                           <Icon className="w-full h-full text-white" />
                         </div>
                         <div className="space-y-2">
-                          <h3 className="font-semibold text-lg text-black group-hover:text-purple-600 transition-colors">
+                          <h3 className="font-semibold text-lg text-white group-hover:text-purple-400 transition-colors">
                             {service.name}
                           </h3>
-                          <p className="text-sm text-black/60 leading-relaxed">
+                          <p className="text-sm text-white/60 leading-relaxed">
                             {service.description}
                           </p>
                         </div>
@@ -103,11 +104,11 @@ const Services = () => {
 
           {/* CTA Section */}
           <div className="text-center mt-16">
-            <div className="rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl p-8 shadow-xl">
-              <h3 className="text-2xl font-bold text-black mb-4">
+            <div className="rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 shadow-xl">
+              <h3 className="text-2xl font-bold text-white mb-4">
                 Ready to Start Your Project?
               </h3>
-              <p className="text-black/70 mb-6 max-w-2xl mx-auto">
+              <p className="text-white/70 mb-6 max-w-2xl mx-auto">
                 Get in touch with our expert team to discuss your requirements and bring your ideas to life.
               </p>
               <a

@@ -67,39 +67,45 @@ const Projects = () => {
         <script type="application/ld+json">{JSON.stringify(listSchema)}</script>
       </Helmet>
 
-      <section className="py-12 md:py-20 bg-white text-black">
-        <div className="mx-auto max-w-5xl">
+      <section className="py-12 md:py-20 bg-black text-white relative">
+        <div className="absolute inset-0 -z-10">
+          <div className="absolute inset-0 bg-grid-white/[0.05] bg-[size:50px_50px] opacity-20" />
+          <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-900/20 rounded-full blur-3xl animate-pulse"></div>
+          <div className="absolute top-3/4 right-1/4 w-80 h-80 bg-indigo-900/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "2s" }}></div>
+          <div className="absolute bottom-1/4 left-1/2 w-72 h-72 bg-violet-900/20 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "4s" }}></div>
+        </div>
+        <div className="mx-auto max-w-5xl relative z-10">
           <h1 className="text-3xl md:text-5xl font-extrabold tracking-tight">
             Projects & Case Studies
           </h1>
-          <p className="mt-3 text-black/70 max-w-2xl">
-            A snapshot of work we love. If you want a deeper dive, reach out — we’ll walk you through our approach in detail.
+          <p className="mt-3 text-white/70 max-w-2xl">
+            A snapshot of work we love. If you want a deeper dive, reach out — we'll walk you through our approach in detail.
           </p>
 
           <div className="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
             {projects.map(({ title, desc, Icon, tags }) => (
-              <article key={title} className="rounded-xl border border-black/10 bg-white hover:shadow-lg transition-all">
+              <article key={title} className="rounded-3xl border border-white/10 bg-white/5 hover:shadow-[0_0_15px_rgba(139,92,246,0.3)] transition-all">
                 <Card className="bg-transparent border-0 shadow-none">
                   <CardHeader>
                     <div className="flex items-center gap-3">
-                      <Icon className="text-indigo-600" />
-                      <CardTitle className="text-xl text-black">{title}</CardTitle>
+                      <Icon className="text-purple-500" />
+                      <CardTitle className="text-xl text-white">{title}</CardTitle>
                     </div>
-                    <CardDescription className="text-black/70">{desc}</CardDescription>
+                    <CardDescription className="text-white/70">{desc}</CardDescription>
                   </CardHeader>
                   <CardContent>
                     <div className="flex flex-wrap gap-2">
                       {tags.map((t) => (
                         <span
                           key={t}
-                          className="text-xs px-2 py-1 rounded-full border border-black/10 bg-black/5 text-black"
+                          className="text-xs px-2 py-1 rounded-full border border-white/10 bg-white/5 text-white/80"
                         >
                           {t}
                         </span>
                       ))}
                     </div>
                     <div className="mt-6">
-                      <Button asChild className="bg-indigo-600 hover:bg-indigo-700 text-white">
+                      <Button asChild className="bg-gradient-to-r from-purple-500 via-indigo-500 to-violet-600 hover:opacity-90 text-white">
                         <Link to="/contact">View case study</Link>
                       </Button>
                     </div>

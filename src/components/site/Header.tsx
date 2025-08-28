@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 z-50 w-full bg-white/5 backdrop-blur-2xl border-b border-purple-200/30">
+    <header className="fixed top-0 z-50 w-full bg-black/50 backdrop-blur-2xl border-b border-indigo-900/50">
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 font-semibold text-lg">
@@ -29,8 +29,8 @@ const Header = () => {
               key={to}
               to={to}
               className={({ isActive }) =>
-                `transition-all duration-300 hover:text-purple-600 hover:scale-105 px-3 py-2 rounded-xl hover:bg-purple-100/20 ${
-                  isActive ? "text-purple-600 bg-purple-100/30" : "text-black/80"
+                `transition-all duration-300 hover:text-indigo-400 hover:scale-105 px-3 py-2 rounded-xl hover:bg-indigo-900/30 ${
+                  isActive ? "text-indigo-400 bg-indigo-900/40" : "text-gray-300"
                 }`
               }
             >
@@ -45,14 +45,14 @@ const Header = () => {
             asChild
             variant="ghost"
             size="sm"
-            className="hidden md:flex text-black/80 hover:text-purple-600 hover:bg-purple-100/20 rounded-xl"
+            className="hidden md:flex text-gray-300 hover:text-indigo-400 hover:bg-indigo-900/30 rounded-xl"
           >
             <Link to="/internships">Join Program</Link>
           </Button>
           <Button
             asChild
             size="sm"
-            className="bg-gradient-to-r from-purple-600 to-indigo-600 text-white hover:from-purple-700 hover:to-indigo-700 rounded-2xl px-6 shadow-lg shadow-purple-500/30 hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-indigo-600 to-violet-700 text-white hover:from-indigo-700 hover:to-violet-800 rounded-2xl px-6 shadow-lg shadow-indigo-500/30 hover:scale-105 transition-all duration-300"
           >
             <Link to="/contact">Start Project</Link>
           </Button>

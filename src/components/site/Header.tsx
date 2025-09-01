@@ -1,5 +1,6 @@
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import zapsterLogo from "@/assets/zapsters_logo.png";
 
 const Header = () => {
   return (
@@ -7,9 +8,7 @@ const Header = () => {
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 font-semibold text-lg">
-          <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-purple-600 via-indigo-600 to-violet-700 flex items-center justify-center shadow-lg shadow-purple-500/30">
-            <span className="text-white font-black text-lg">Z</span>
-          </div>
+          <img src={zapsterLogo} alt="Zapsters Logo" className="w-12 h-12" />
           <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-700 bg-clip-text text-transparent font-black">
             Zapsters
           </span>

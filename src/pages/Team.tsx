@@ -44,6 +44,12 @@ const Team = () => {
       focus: "Focus areas: web performance, secure data, and developer experience."
     },
     { 
+      name: "Guru Prasanth", 
+      role: "Full-stack Engineer", 
+      description: "Develops end-to-end solutions with expertise in both frontend and backend technologies.",
+      focus: "Focus areas: scalable architecture, API design, and responsive interfaces."
+    },
+    { 
       name: "Balakumaran", 
       role: "Red Teamer", 
       description: "Security expert specializing in penetration testing and vulnerability assessment.",
@@ -62,34 +68,46 @@ const Team = () => {
       focus: "Focus areas: interaction design, visual design, and user research."
     },
     { 
-      name: "Guru Prasanth", 
-      role: "Full-stack Engineer", 
-      description: "Develops end-to-end solutions with expertise in both frontend and backend technologies.",
-      focus: "Focus areas: scalable architecture, API design, and responsive interfaces."
+      name: "Praveen S", 
+      role: "Marketing Manager", 
+      description: "Drives marketing strategies and campaigns to increase brand awareness and reach.",
+      focus: "Focus areas: digital marketing, content strategy, and brand development."
     },
     { 
-      name: "Arun Kumar", 
-      role: "DevOps Engineer", 
-      description: "Manages infrastructure and deployment pipelines for seamless product delivery.",
-      focus: "Focus areas: CI/CD, cloud infrastructure, and containerization."
+      name: "Praveen N", 
+      role: "Graphic Designer", 
+      description: "Creates visually compelling graphics and illustrations for various platforms.",
+      focus: "Focus areas: brand identity, digital graphics, and visual storytelling."
     },
     { 
-      name: "Priya Sharma", 
-      role: "Product Manager", 
-      description: "Drives product vision and roadmap to deliver value to customers.",
-      focus: "Focus areas: user stories, feature prioritization, and market research."
+      name: "Raghunandhan T", 
+      role: "Graphic Designer", 
+      description: "Designs creative visual assets that communicate brand messages effectively.",
+      focus: "Focus areas: print design, digital media, and brand consistency."
     },
     { 
-      name: "Vikram Singh", 
-      role: "Data Scientist", 
-      description: "Analyzes data to extract insights and build predictive models.",
-      focus: "Focus areas: machine learning, data visualization, and statistical analysis."
+      name: "Vishal R", 
+      role: "Graphic Designer", 
+      description: "Crafts engaging visual content that enhances brand recognition and appeal.",
+      focus: "Focus areas: illustration, typography, and motion graphics."
     },
     { 
-      name: "Divya Patel", 
-      role: "QA Engineer", 
-      description: "Ensures product quality through comprehensive testing strategies.",
-      focus: "Focus areas: automated testing, test planning, and quality assurance."
+      name: "Rahul G S", 
+      role: "Graphic Designer", 
+      description: "Develops eye-catching designs that elevate brand presence across platforms.",
+      focus: "Focus areas: UI graphics, social media assets, and promotional materials."
+    },
+    { 
+      name: "Rithik Balaji", 
+      role: "UI/UX Designer", 
+      description: "Designs intuitive user interfaces and seamless user experiences.",
+      focus: "Focus areas: user-centered design, wireframing, and prototyping."
+    },
+    { 
+      name: "Sanjay Akash", 
+      role: "Front End Developer", 
+      description: "Builds responsive and interactive user interfaces with modern web technologies.",
+      focus: "Focus areas: React, responsive design, and performance optimization."
     }
   ];
 

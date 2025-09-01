@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Heart } from "lucide-react";
+import zapsterLogo from "@/assets/zapsters_logo.png";
 
 const Footer = () => {
   const year = new Date().getFullYear();
@@ -9,9 +10,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center">
-                <span className="text-white font-black text-sm">Z</span>
-              </div>
+              <img src={zapsterLogo} alt="Zapsters Logo" className="w-8 h-8" />
               <span className="font-black text-xl bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Zapsters</span>
             </div>
             <p className="text-gray-400 leading-relaxed">

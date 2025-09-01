@@ -5,16 +5,16 @@ import { Quote, Star } from 'lucide-react';
 // Generate 50 unique testimonials
 const generateTestimonials = () => {
   const names = [
-    'Priya Sharma', 'Marco Rodriguez', 'Sarah Chen', 'David Kim', 'Aisha Patel',
-    'John Smith', 'Emma Wilson', 'Michael Chang', 'Olivia Brown', 'James Johnson',
-    'Sophia Martinez', 'William Lee', 'Isabella Garcia', 'Benjamin Taylor', 'Mia Anderson',
-    'Ethan Wright', 'Ava Thomas', 'Alexander Clark', 'Charlotte Lewis', 'Daniel Walker',
-    'Amelia Hall', 'Matthew Allen', 'Harper Young', 'Joseph King', 'Abigail Scott',
-    'Samuel Adams', 'Elizabeth Green', 'Christopher Baker', 'Sofia Nelson', 'Andrew Hill',
-    'Victoria Carter', 'Joshua Mitchell', 'Grace Turner', 'Ryan Phillips', 'Chloe Campbell',
-    'Nathan Evans', 'Lily Roberts', 'Jack Morgan', 'Zoe Cooper', 'Luke Rogers',
-    'Hannah Reed', 'Gabriel Wood', 'Layla Bailey', 'Owen Richardson', 'Nora Gray',
-    'Caleb Watson', 'Audrey Brooks', 'Isaac Perry', 'Scarlett Coleman', 'Henry Foster'
+    'Anbu Selvan', 'Thamizh Selvi', 'Karthik Murugan', 'Kavitha Sundaram', 'Senthil Kumar',
+    'Meenakshi Ammal', 'Rajesh Kannan', 'Lakshmi Narayanan', 'Priya Anand', 'Vijay Kumar',
+    'Divya Bharathi', 'Surya Prakash', 'Aishwarya Rajesh', 'Bala Murugan', 'Deepa Venkat',
+    'Ganesh Venkatraman', 'Hema Malini', 'Iniyan Karunakaran', 'Jothi Lakshmi', 'Kamal Haasan',
+    'Lalitha Kumari', 'Madhan Karky', 'Nithya Menen', 'Oviya Helen', 'Prashanth Neel',
+    'Ramya Krishnan', 'Santhosh Narayanan', 'Trisha Krishnan', 'Udhaya Kumar', 'Vairamuthu',
+    'Yamini Bhaskar', 'Arjun Sarja', 'Bhavana Menon', 'Chitra Lakshmanan', 'Dhanush Rajamani',
+    'Easwari Rao', 'Fazil Mannan', 'Gayathri Raghuram', 'Harish Kalyan', 'Iniya Selvam',
+    'Jayam Ravi', 'Keerthi Suresh', 'Lokesh Kanagaraj', 'Mumtaj Sorcar', 'Nassar Abdulla',
+    'Parvathy Thiruvothu', 'Radha Ravi', 'Saranya Ponvannan', 'Thalapathy Vijay', 'Urvashi Dholakia'
   ];
 
   const companies = [

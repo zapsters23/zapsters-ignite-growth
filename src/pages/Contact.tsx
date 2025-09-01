@@ -204,7 +204,7 @@ const Contact = () => {
                       <Input 
                         id="name" 
                         name="name" 
-                        placeholder="John Doe" 
+                        placeholder="Karthik Murugan" 
                         required 
                         className="rounded-2xl border-white/10 bg-white/5 backdrop-blur-xl text-white placeholder:text-white/50 h-14 text-lg focus:border-purple-500 focus:ring-purple-500"
                       />
@@ -215,7 +215,7 @@ const Contact = () => {
                         id="email" 
                         name="email" 
                         type="email" 
-                        placeholder="john@company.com" 
+                        placeholder="karthik@company.com" 
                         required 
                         className="rounded-2xl border-white/10 bg-white/5 backdrop-blur-xl text-white placeholder:text-white/50 h-14 text-lg focus:border-purple-500 focus:ring-purple-500"
                       />

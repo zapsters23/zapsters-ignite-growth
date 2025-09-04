@@ -33,7 +33,7 @@ const App = () => (
               <Route path="/events" element={<Events />} />
               <Route path="/contact" element={<Contact />} />
             </Route>
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+            {/* ADD ALL CUSTOM ROUTES FUCK ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>

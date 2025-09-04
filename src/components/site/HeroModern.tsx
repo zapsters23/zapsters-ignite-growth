@@ -58,12 +58,12 @@ const HeroModern = () => {
             {/* Stats */}
             <div className="flex items-center justify-center lg:justify-start gap-8 pt-8 animate-fade-in" style={{ animationDelay: "0.6s" }}>
               <div className="text-center">
-                <div className="text-3xl font-bold text-indigo-600">100+</div>
+                <div className="text-3xl font-bold text-indigo-600">10+</div>
                 <div className="text-sm text-white/60">Projects Delivered</div>
               </div>
               <div className="w-px h-12 bg-white/10"></div>
               <div className="text-center">
-                <div className="text-3xl font-bold text-purple-600">50+</div>
+                <div className="text-3xl font-bold text-purple-600">200+</div>
                 <div className="text-sm text-white/60">Happy Clients</div>
               </div>
               <div className="w-px h-12 bg-white/10"></div>

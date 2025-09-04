@@ -10,7 +10,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src={zapsterLogo} alt="Zapsters Logo" className="w-8 h-8" />
+              <img 
+                src={zapsterLogo} 
+                alt="Zapsters Logo" 
+                className="w-12 h-12 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]" 
+              />
               <span className="font-black text-xl bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">Zapsters</span>
             </div>
             <p className="text-gray-400 leading-relaxed">

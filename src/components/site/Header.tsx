@@ -8,8 +8,12 @@ const Header = () => {
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 font-semibold text-lg">
-          <img src={zapsterLogo} alt="Zapsters Logo" className="w-12 h-12" />
-          <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-700 bg-clip-text text-transparent font-black">
+          <img 
+            src={zapsterLogo} 
+            alt="Zapsters Logo" 
+            className="w-16 h-16 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]" 
+          />
+          <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-700 bg-clip-text text-transparent font-black text-xl">
             Zapsters
           </span>
         </Link>

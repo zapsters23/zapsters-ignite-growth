@@ -74,13 +74,20 @@ const HeroModern = () => {
             </div>
           </div>
 
-          {/* Visual */}
+          {/* Visual - GIF Placeholder */}
           <div className="relative lg:block hidden">
             <div className="relative space-y-6">
-              <div className="w-96 h-96 mx-auto relative">
-                <div className="w-full h-full rounded-3xl border border-white/30 bg-white/15 backdrop-blur-2xl overflow-hidden shadow-2xl">
+              <div className="w-[500px] h-[350px] mx-auto relative">
+                <div className="w-full h-full rounded-3xl border border-white/30 bg-gradient-to-br from-black/40 via-purple-900/20 to-indigo-900/30 backdrop-blur-2xl overflow-hidden shadow-2xl">
                   <div className="absolute inset-0 flex items-center justify-center">
-                    <Cpu className="w-40 h-40 text-purple-400/60" />
+                    <div className="text-white/70 text-center">
+                      <div className="w-full h-full flex items-center justify-center">
+                        <div className="animate-pulse p-4 rounded-lg">
+                          <p className="text-lg font-medium">GIF Placeholder</p>
+                          <p className="text-sm opacity-70">Animation will go here</p>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

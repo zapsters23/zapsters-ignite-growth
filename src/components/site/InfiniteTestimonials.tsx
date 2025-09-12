@@ -194,8 +194,8 @@ const InfiniteTestimonials = () => {
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center gap-4 pt-4 border-t border-white/20">
-                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-purple-400/50 bg-gradient-to-r from-purple-600 to-indigo-600 flex items-center justify-center">
+              <div className="flex items-center gap-4 pt-4 border-t border-purple-400/50">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-400/50 bg-gradient-to-r from-gray-500 to-gray-600 flex items-center justify-center">
                   <span className="text-white font-bold">
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
                   </span>

@@ -11,11 +11,11 @@ const buttonVariants = cva(
       variant: {
         default: "bg-violet-600 text-white hover:bg-violet-700 shadow-lg",
         destructive: "bg-red-600 text-white hover:bg-red-700 shadow-lg",
-        outline: "border border-violet-300 bg-white/10 backdrop-blur-xl text-violet-600 hover:bg-violet-50/20 hover:text-violet-700 shadow-lg",
-        secondary: "bg-gray-200 text-gray-900 hover:bg-gray-300 shadow-lg",
-        ghost: "hover:bg-violet-100/20 hover:text-violet-600 backdrop-blur-sm",
-        link: "text-violet-600 underline-offset-4 hover:underline",
-        hero: "bg-gradient-to-r from-violet-600 to-purple-600 text-white border-0 shadow-xl shadow-violet-500/50 hover:shadow-2xl hover:shadow-purple-500/60 hover:scale-105 transform transition-all duration-300 font-semibold backdrop-blur-xl",
+        outline: "border border-violet-300 bg-white/10 backdrop-blur-xl text-violet-400 hover:bg-violet-50/20 hover:text-violet-300 shadow-lg",
+        secondary: "bg-violet-200 text-violet-900 hover:bg-violet-300 shadow-lg",
+        ghost: "hover:bg-violet-100/20 hover:text-violet-400 backdrop-blur-sm",
+        link: "text-violet-400 underline-offset-4 hover:underline",
+        hero: "bg-gradient-to-r from-violet-600 to-purple-600 text-white border-0 shadow-xl shadow-violet-500/50 hover:shadow-2xl hover:shadow-violet-500/60 hover:scale-105 transform transition-all duration-300 font-semibold backdrop-blur-xl",
         glass: "bg-white/10 backdrop-blur-xl border border-white/20 text-white hover:bg-white/20 shadow-xl",
       },
       size: {

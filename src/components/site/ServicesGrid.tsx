@@ -57,7 +57,7 @@ const ServicesGrid = () => {
         {/* Section title */}
         <div className="text-center space-y-6 mb-16">
           <h2 className="text-4xl md:text-6xl font-black tracking-tight text-white">
-            Our <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-700 bg-clip-text text-transparent">Expertise</span>
+            Our <span className="bg-gradient-to-r from-purple-500 via-indigo-500 to-violet-600 bg-clip-text text-transparent">Expertise</span>
           </h2>
           <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
             From cutting-edge AI to robust cybersecurity, we deliver premium solutions across every technology stack
@@ -79,7 +79,7 @@ const ServicesGrid = () => {
                     <Icon className="w-full h-full text-white" />
                   </div>
                   <div className="space-y-3">
-                    <h3 className="font-bold text-xl text-white group-hover:text-purple-400 transition-colors">
+                    <h3 className="font-bold text-xl text-white group-hover:text-violet-300 transition-colors">
                       {service.name}
                     </h3>
                     <p className="text-base text-white/70 leading-relaxed">

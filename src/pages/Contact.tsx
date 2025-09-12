@@ -95,10 +95,10 @@ const Contact = () => {
                       </div>
                       <div className="space-y-3">
                         <h3 className="font-bold text-xl text-white">Email Us</h3>
-                        <a href="mailto:admin@zapsters.in" className="block text-white/70 hover:text-purple-400 transition-colors text-lg font-medium">
+                        <a href="mailto:admin@zapsters.in" className="block text-white/70 hover:text-gray-300 transition-colors text-lg font-medium">
                           admin@zapsters.in
                         </a>
-                        <a href="mailto:support@zapsters.in" className="block text-white/70 hover:text-purple-400 transition-colors text-lg font-medium">
+                        <a href="mailto:support@zapsters.in" className="block text-white/70 hover:text-gray-300 transition-colors text-lg font-medium">
                           support@zapsters.in
                         </a>
                       </div>
@@ -114,10 +114,10 @@ const Contact = () => {
                       </div>
                       <div className="space-y-3">
                         <h3 className="font-bold text-xl text-white">Call Us</h3>
-                        <a href="tel:+919342408432" className="block text-white/70 hover:text-purple-400 transition-colors text-lg font-medium">
+                        <a href="tel:+919342408432" className="block text-white/70 hover:text-gray-300 transition-colors text-lg font-medium">
                           +91 9342 408 432
                         </a>
-                        <a href="tel:+919514408432" className="block text-white/70 hover:text-purple-400 transition-colors text-lg font-medium">
+                        <a href="tel:+919514408432" className="block text-white/70 hover:text-gray-300 transition-colors text-lg font-medium">
                           +91 9514 408 432
                         </a>
                       </div>

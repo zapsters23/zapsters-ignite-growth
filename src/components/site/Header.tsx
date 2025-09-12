@@ -4,7 +4,7 @@ import zapsterLogo from "@/assets/zapsters_logo.png";
 
 const Header = () => {
   return (
-    <header className="fixed top-0 z-50 w-full bg-black/50 backdrop-blur-2xl border-b border-indigo-900/50">
+    <header className="fixed top-0 z-50 w-full bg-black/50 backdrop-blur-2xl border-b border-gray-700/50">
       <div className="container flex h-20 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-3 font-semibold text-lg">
@@ -13,7 +13,7 @@ const Header = () => {
             alt="Zapsters Logo" 
             className="w-16 h-16 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]" 
           />
-          <span className="bg-gradient-to-r from-purple-600 via-indigo-600 to-violet-700 bg-clip-text text-transparent font-black text-xl">
+          <span className="bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500 bg-clip-text text-transparent font-black text-xl">
             Zapsters
           </span>
         </Link>
@@ -32,8 +32,8 @@ const Header = () => {
               key={to}
               to={to}
               className={({ isActive }) =>
-                `transition-all duration-300 hover:text-indigo-400 hover:scale-105 px-3 py-2 rounded-xl hover:bg-indigo-900/30 ${
-                  isActive ? "text-indigo-400 bg-indigo-900/40" : "text-gray-300"
+                `transition-all duration-300 hover:text-violet-400 hover:scale-105 px-3 py-2 rounded-xl hover:bg-violet-700/30 ${
+                  isActive ? "text-violet-400 bg-violet-700/40" : "text-gray-300"
                 }`
               }
             >
@@ -48,14 +48,14 @@ const Header = () => {
             asChild
             variant="ghost"
             size="sm"
-            className="hidden md:flex text-gray-300 hover:text-indigo-400 hover:bg-indigo-900/30 rounded-xl"
+            className="hidden md:flex text-gray-300 hover:text-gray-400 hover:bg-gray-700/30 rounded-xl"
           >
             <Link to="/internships">Join Program</Link>
           </Button>
           <Button
             asChild
             size="sm"
-            className="bg-gradient-to-r from-indigo-600 to-violet-700 text-white hover:from-indigo-700 hover:to-violet-800 rounded-2xl px-6 shadow-lg shadow-indigo-500/30 hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-gray-600 to-gray-700 text-white hover:from-gray-700 hover:to-gray-800 rounded-2xl px-6 shadow-lg shadow-gray-500/30 hover:scale-105 transition-all duration-300"
           >
             <Link to="/contact">Start Project</Link>
           </Button>

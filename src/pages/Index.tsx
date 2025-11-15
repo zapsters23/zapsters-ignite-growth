@@ -215,9 +215,9 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
             {/* Brand */}
             <div className="col-span-1 md:col-span-2">
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-purple-400 to-pink-600 bg-clip-text text-transparent mb-4">
-                Zapsters
-              </h3>
+               <h3 className="text-2xl font-bold text-white mb-4">
+                 Zapsters
+               </h3>
               <p className="text-gray-400 mb-4 max-w-md">
                 Igniting excellence through cutting-edge technology solutions, professional training, and innovative security services.
               </p>

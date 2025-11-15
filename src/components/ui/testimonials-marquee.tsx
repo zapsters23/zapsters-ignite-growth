@@ -70,7 +70,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = (
     >
       <div className="relative p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/[0.02] border border-white/10 backdrop-blur-sm hover:border-white/20 transition-all duration-300 h-full">
         {/* Quote icon */}
-        <div className="absolute -top-4 -left-4 text-6xl text-purple-500/20 font-serif">"</div>
+         <div className="absolute -top-4 -left-4 text-6xl text-white/20 font-serif">"</div>
 
         {/* Rating */}
         <div className="flex gap-1 mb-4">
@@ -91,7 +91,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = (
 
         {/* Author */}
         <div className="flex items-center gap-4">
-          <div className="w-12 h-12 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white font-bold text-lg">
+           <div className="w-12 h-12 rounded-full bg-gradient-to-br from-white to-gray-300 flex items-center justify-center text-black font-bold text-lg">
             {testimonial.name.charAt(0)}
           </div>
           <div>
@@ -103,7 +103,7 @@ const TestimonialCard: React.FC<{ testimonial: Testimonial; index: number }> = (
         </div>
 
         {/* Hover glow */}
-        <div className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-purple-500/0 to-pink-500/0 group-hover:from-purple-500/10 group-hover:to-pink-500/10 transition-all duration-300" />
+         <div className="absolute inset-0 -z-10 rounded-2xl bg-gradient-to-br from-white/0 to-white/0 group-hover:from-white/5 group-hover:to-white/5 transition-all duration-300" />
       </div>
     </motion.div>
   );
@@ -123,9 +123,9 @@ export const TestimonialsMarquee: React.FC = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-6xl font-bold mb-4 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
-            What Our Clients Say
-          </h2>
+           <h2 className="text-4xl md:text-6xl font-bold mb-4 text-white">
+             What Our Clients Say
+           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Don't just take our word for it. Here's what our clients have to say about working with Zapsters.
           </p>
@@ -144,8 +144,8 @@ export const TestimonialsMarquee: React.FC = () => {
       </div>
 
       {/* Gradient orbs */}
-      <div className="absolute top-1/4 left-0 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
+       <div className="absolute top-1/4 left-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+       <div className="absolute bottom-1/4 right-0 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
     </section>
   );
 };

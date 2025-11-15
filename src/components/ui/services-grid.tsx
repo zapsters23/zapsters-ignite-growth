@@ -130,8 +130,8 @@ export const ServicesGrid: React.FC = () => {
     <section id="services" className="relative py-20 overflow-hidden">
       {/* Background decorations */}
       <div className="absolute inset-0 bg-grid-pattern opacity-10" />
-      <div className="absolute top-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl" />
-      <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-pink-500/10 rounded-full blur-3xl" />
+       <div className="absolute top-0 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
+       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-white/5 rounded-full blur-3xl" />
 
       <div className="relative max-w-7xl mx-auto px-8">
         {/* Header */}
@@ -145,16 +145,16 @@ export const ServicesGrid: React.FC = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="inline-block mb-4 px-4 py-2 rounded-full bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-white/10"
-          >
-            <span className="text-sm font-semibold bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-              WHAT WE DO
-            </span>
-          </motion.div>
+             className="inline-block mb-4 px-4 py-2 rounded-full bg-white/10 border border-white/20"
+           >
+             <span className="text-sm font-semibold text-white">
+               WHAT WE DO
+             </span>
+           </motion.div>
 
-          <h2 className="text-4xl md:text-6xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-pink-200 bg-clip-text text-transparent">
-            Empowering Innovation Through Technology
-          </h2>
+           <h2 className="text-4xl md:text-6xl font-bold mb-6 text-white">
+             Empowering Innovation Through Technology
+           </h2>
           <p className="text-gray-400 text-lg max-w-3xl mx-auto leading-relaxed">
             At Zapsters, we deliver comprehensive technology solutions - from cutting-edge web development
             and stunning UI/UX design to advanced cybersecurity, competitive CTF events, professional
@@ -180,7 +180,7 @@ export const ServicesGrid: React.FC = () => {
             href="/contact"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="inline-block px-8 py-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 text-white font-semibold text-lg shadow-lg shadow-purple-500/25 hover:shadow-purple-500/40 transition-shadow"
+             className="inline-block px-8 py-4 rounded-full bg-white text-black font-semibold text-lg shadow-lg hover:bg-gray-100 transition-all"
           >
             Start Your Project
           </motion.a>

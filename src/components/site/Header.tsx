@@ -15,16 +15,16 @@ const Header = () => {
       <div        className="container flex h-20 items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 font-semibold text-lg group">
-          <motion.img
-            whileHover={{ scale: 1.1, rotate: 5 }}
-            transition={{ type: "spring", stiffness: 300 }}
-            src={zapsterLogo}
-            alt="Zapsters Logo"
-            className="w-12 h-12 drop-shadow-[0_0_15px_rgba(168,85,247,0.3)]"
-          />
-          <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-black text-xl">
-            Zapsters
-          </span>
+           <motion.img
+             whileHover={{ scale: 1.1, rotate: 5 }}
+             transition={{ type: "spring", stiffness: 300 }}
+             src={zapsterLogo}
+             alt="Zapsters Logo"
+             className="w-12 h-12 drop-shadow-[0_0_15px_rgba(255,255,255,0.3)]"
+           />
+           <span className="text-white font-black text-xl">
+             Zapsters
+           </span>
         </Link>
 
         {/* Navigation */}
@@ -40,11 +40,11 @@ const Header = () => {
             <NavLink
               key={to}
               to={to}
-              className={({ isActive }) =>
-                `transition-all duration-300 hover:text-purple-300 hover:scale-105 px-3 py-1.5 rounded-lg hover:bg-purple-500/10 ${
-                  isActive ? "text-purple-300 bg-purple-500/10" : "text-gray-300"
-                }`
-              }
+               className={({ isActive }) =>
+                 `transition-all duration-300 hover:text-white hover:scale-105 px-3 py-1.5 rounded-lg hover:bg-white/10 ${
+                   isActive ? "text-white bg-white/10" : "text-gray-300"
+                 }`
+               }
             >
               {label}
             </NavLink>
@@ -53,21 +53,21 @@ const Header = () => {
 
         {/* Actions */}
         <div className="flex items-center gap-2">
-          <Button
-            asChild
-            variant="ghost"
-            size="sm"
-            className="hidden md:flex text-gray-700 hover:text-purple-600 hover:bg-purple-50"
-          >
-            <Link to="/internships">Join Program</Link>
-          </Button>
-          <Button
-            asChild
-            size="sm"
-            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 px-4 shadow-lg shadow-purple-500/30 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300"
-          >
-            <Link to="/contact">Start Project</Link>
-          </Button>
+           <Button
+             asChild
+             variant="ghost"
+             size="sm"
+             className="hidden md:flex text-gray-300 hover:text-white hover:bg-white/10"
+           >
+             <Link to="/internships">Join Program</Link>
+           </Button>
+           <Button
+             asChild
+             size="sm"
+             className="bg-white text-black hover:bg-gray-100 px-4 shadow-lg hover:scale-105 transition-all duration-300"
+           >
+             <Link to="/contact">Start Project</Link>
+           </Button>
         </div>
       </div>
     </motion.header>

@@ -1,41 +1,36 @@
 import InfiniteTestimonials from "./InfiniteTestimonials";
-
-
+import { motion } from "framer-motion";
+import DottedGlowBackground from "@/components/aceternity/backgrounds/DottedGlowBackground";
 
 const TestimonialsSection = () => {
   return (
-    <section className="py-20 md:py-32 relative bg-black">
-      {/* Enhanced background shapes */}
-      <div className="absolute inset-0 -z-10">
-        <div className="absolute top-1/4 right-1/4 w-[500px] h-[500px] bg-gradient-to-r from-purple-900/20 to-indigo-900/20 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 left-1/3 w-[400px] h-[400px] bg-gradient-to-r from-violet-900/15 to-purple-900/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: "3s" }}></div>
-        <div
-          className="absolute inset-0 opacity-10"
-          style={{
-            backgroundImage: "radial-gradient(circle at 2px 2px, rgba(255, 255, 255, 0.3) 2px, transparent 0)",
-            backgroundSize: "50px 50px",
-          }}
-        />
-      </div>
-
+    <DottedGlowBackground className="py-20 md:py-32">
       <div className="container">
         {/* Section Heading */}
-        <div className="text-center space-y-6 mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-6xl font-black tracking-tight text-white">
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-center space-y-6 mb-16"
+        >
+          <h2 className="text-4xl md:text-6xl font-black tracking-tight">
             What Our Clients
             <br />
-            <span className="text-purple-600">Say About Us</span>
+            <span className="bg-gradient-to-r from-blue-600 to-cyan-500 bg-clip-text text-transparent">
+              Say About Us
+            </span>
           </h2>
-          <p className="text-xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto font-light leading-relaxed">
             Don't just take our word for it. Here's what industry leaders say
             about working with Zapsters.
           </p>
-        </div>
+        </motion.div>
 
         {/* Infinite Scrolling Testimonials */}
         <InfiniteTestimonials />
       </div>
-    </section>
+    </DottedGlowBackground>
   );
 };
 

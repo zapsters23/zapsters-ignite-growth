@@ -172,9 +172,9 @@ const InfiniteTestimonials = () => {
             key={`${testimonial.id}-${index}`}
             className="flex-shrink-0 w-[350px]"
           >
-            <Card className="group border border-white/10 bg-white/5 backdrop-blur-xl rounded-3xl p-8 space-y-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/20 h-full">
+            <Card className="group border-2 border-blue-200 bg-white backdrop-blur-xl rounded-3xl p-8 space-y-6 transition-all duration-300 hover:scale-105 hover:shadow-2xl hover:shadow-blue-500/20 h-full">
               {/* Quote Icon */}
-              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-purple-600 to-indigo-600 p-3 group-hover:scale-110 transition-transform shadow-lg">
+              <div className="w-12 h-12 rounded-xl bg-gradient-to-r from-blue-600 to-cyan-500 p-3 group-hover:scale-110 transition-transform shadow-lg">
                 <Quote className="w-full h-full text-white" />
               </div>
 
@@ -183,26 +183,26 @@ const InfiniteTestimonials = () => {
                 {[...Array(testimonial.rating)].map((_, i) => (
                   <Star
                     key={i}
-                    className="w-4 h-4 fill-purple-500 text-purple-500"
+                    className="w-4 h-4 fill-blue-500 text-blue-500"
                   />
                 ))}
               </div>
 
               {/* Content */}
-              <blockquote className="text-lg leading-relaxed text-white">
+              <blockquote className="text-lg leading-relaxed text-gray-700">
                 "{testimonial.content}"
               </blockquote>
 
               {/* Author */}
-              <div className="flex items-center gap-4 pt-4 border-t border-purple-400/50">
-                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-gray-400/50 bg-gradient-to-r from-gray-500 to-gray-600 flex items-center justify-center">
-                  <span className="text-white font-bold">
+              <div className="flex items-center gap-4 pt-4 border-t border-blue-200">
+                <div className="w-12 h-12 rounded-full overflow-hidden border-2 border-blue-200 bg-gradient-to-r from-blue-500 to-cyan-500 flex items-center justify-center">
+                  <span className="text-white font-bold text-sm">
                     {testimonial.name.split(' ').map(n => n[0]).join('')}
                   </span>
                 </div>
                 <div>
-                  <div className="font-semibold text-white">{testimonial.name}</div>
-                  <div className="text-sm text-white/60">{testimonial.role}</div>
+                  <div className="font-semibold text-gray-800">{testimonial.name}</div>
+                  <div className="text-sm text-gray-600">{testimonial.role}</div>
                 </div>
               </div>
             </Card>
@@ -211,8 +211,8 @@ const InfiniteTestimonials = () => {
       </div>
       
       {/* Gradient overlays to indicate infinite scroll */}
-      <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-black to-transparent z-10"></div>
-      <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-black to-transparent z-10"></div>
+      <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-white to-transparent z-10"></div>
+      <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-white to-transparent z-10"></div>
     </div>
   );
 };

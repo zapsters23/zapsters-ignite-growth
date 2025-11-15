@@ -1,25 +1,34 @@
 import { Link, NavLink } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import zapsterLogo from "@/assets/zapsters_logo.png";
+import { motion } from "framer-motion";
+
 
 const Header = () => {
   return (
-    <header className="fixed top-0 z-50 w-full bg-black/50 backdrop-blur-2xl border-b border-gray-700/50">
-      <div className="container flex h-20 items-center justify-between">
+    <motion.header
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ type: "spring", stiffness: 100 }}
+       className="fixed top-0 z-50 w-full bg-black backdrop-blur-2xl border-b border-white/10 shadow-lg"
+    >
+      <div        className="container flex h-20 items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="flex items-center gap-3 font-semibold text-lg">
-          <img 
-            src={zapsterLogo} 
-            alt="Zapsters Logo" 
-            className="w-16 h-16 drop-shadow-[0_0_15px_rgba(255,255,255,0.7)]" 
+        <Link to="/" className="flex items-center gap-2 font-semibold text-lg group">
+          <motion.img
+            whileHover={{ scale: 1.1, rotate: 5 }}
+            transition={{ type: "spring", stiffness: 300 }}
+            src={zapsterLogo}
+            alt="Zapsters Logo"
+            className="w-12 h-12 drop-shadow-[0_0_15px_rgba(168,85,247,0.3)]"
           />
-          <span className="bg-gradient-to-r from-gray-400 via-gray-300 to-gray-500 bg-clip-text text-transparent font-black text-xl">
+          <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent font-black text-xl">
             Zapsters
           </span>
         </Link>
 
         {/* Navigation */}
-        <nav className="hidden md:flex items-center gap-6 text-sm font-medium">
+        <nav className="hidden md:flex items-center gap-1 text-sm font-medium">
           {[
             { to: "/", label: "Home" },
             { to: "/services", label: "Services" },
@@ -32,8 +41,8 @@ const Header = () => {
               key={to}
               to={to}
               className={({ isActive }) =>
-                `transition-all duration-300 hover:text-violet-400 hover:scale-105 px-3 py-2 rounded-xl hover:bg-violet-700/30 ${
-                  isActive ? "text-violet-400 bg-violet-700/40" : "text-gray-300"
+                `transition-all duration-300 hover:text-purple-300 hover:scale-105 px-3 py-1.5 rounded-lg hover:bg-purple-500/10 ${
+                  isActive ? "text-purple-300 bg-purple-500/10" : "text-gray-300"
                 }`
               }
             >
@@ -43,25 +52,25 @@ const Header = () => {
         </nav>
 
         {/* Actions */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2">
           <Button
             asChild
             variant="ghost"
             size="sm"
-            className="hidden md:flex text-gray-300 hover:text-gray-400 hover:bg-gray-700/30 rounded-xl"
+            className="hidden md:flex text-gray-700 hover:text-purple-600 hover:bg-purple-50"
           >
             <Link to="/internships">Join Program</Link>
           </Button>
           <Button
             asChild
             size="sm"
-            className="bg-gradient-to-r from-gray-600 to-gray-700 text-white hover:from-gray-700 hover:to-gray-800 rounded-2xl px-6 shadow-lg shadow-gray-500/30 hover:scale-105 transition-all duration-300"
+            className="bg-gradient-to-r from-purple-500 to-pink-500 text-white hover:from-purple-600 hover:to-pink-600 px-4 shadow-lg shadow-purple-500/30 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/40 transition-all duration-300"
           >
             <Link to="/contact">Start Project</Link>
           </Button>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 
